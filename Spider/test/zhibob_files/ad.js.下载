@@ -1,0 +1,12 @@
+var la=navigator.language
+var userla=window.navigator.userLanguage; 
+
+	
+var all = (la+userla).toLowerCase();
+var la_index = all.indexOf("en");
+
+if(la_index>=0){
+	window.location = "index.html";
+}else{
+	
+}

@@ -1,0 +1,37 @@
+function getCookie(objName) {
+	var arrStr = document.cookie.split("; ");
+	for ( var i = 0; i < arrStr.length; i++) {
+		var temp = arrStr[i].split("=");
+		if (temp[0] == objName) return unescape(temp[1]);
+	}
+}
+function re_cookie(value, ext_time, domain) {
+	var exp = new Date();
+	exp.setTime(exp.getTime() + ext_time * 3600000);
+	document.cookie = "tagid=" + value + ";expires=" + exp.toGMTString() + ";domain=" + domain + ";path=/";
+}
+
+
+ /* * 智能机浏览器版本信息: * */
+var browser={versions:function(){var u=navigator.userAgent,app=navigator.appVersion;return{trident:u.indexOf('Trident')>-1,presto:u.indexOf('Presto')>-1,webKit:u.indexOf('AppleWebKit')>-1,gecko:u.indexOf('Gecko')>-1&&u.indexOf('KHTML')==-1,mobile:!!u.match(/AppleWebKit.*Mobile.*/),ios:!!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/),android:u.indexOf('Android')>-1,iPhone:u.indexOf('iPhone')>-1,iPad:u.indexOf('iPad')>-1,webApp:u.indexOf('Safari')==-1,QQbrw:u.indexOf('MQQBrowser')>-1,ucLowEnd:u.indexOf('UCWEB7.')>-1,ucSpecial:u.indexOf('rv:1.2.3.4')>-1,ucweb:u.indexOf('ucbrowser') > -1,Symbian:u.indexOf('Symbian')>-1,ucSB:u.indexOf('Firefox/1.')>-1};}()}
+var _gaq=_gaq||[];
+(function(win,browser,undefined){
+	var rf=document.referrer;
+	if(rf===""||rf.toLocaleLowerCase().indexOf(".zhibo8.cc")===-1){
+		var defaultJumpDomain=getCookie("defaultJumpDomain","");
+		if(defaultJumpDomain=="www"){return;}
+		if(defaultJumpDomain=="m"){window.location.href="http://m.zhibo8.cc/?from=pc";return;}
+		//if(screen==undefined||screen.width<1200){
+			//if(browser.versions.iPad==true){return;}
+			//if(browser.versions.mobile==true||browser.versions.ios==true||browser.versions.iPhone==true||browser.versions.ucweb==true||browser.versions.ucSpecial==true){
+        if(navigator.userAgent.indexOf('iPad')>-1){
+            return;
+        }
+		if(navigator.userAgent.indexOf('Mobile')>-1 || navigator.userAgent.indexOf('mobile')>-1 || navigator.userAgent.indexOf('Android')>-1  || navigator.userAgent.indexOf('iPhone')>-1){
+			win.location.href="http://www.zhibo8.cc/mobile_jump.htm?from=pc";
+			return;
+		}
+		if(browser.versions.Symbian){win.location.href="http://m.zhibo8.cc/";}
+		//}
+	}
+})(window,browser);
