@@ -48,7 +48,7 @@ def get_products():
             'location ':item.find('.location').text()
         }
         print(product)
-        save_to_mango(product)
+        # save_to_mango(product)
 
 import pymongo
 MONGO_URL = "localhost"
