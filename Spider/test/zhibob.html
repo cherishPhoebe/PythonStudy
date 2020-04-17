@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)https://www.zhibo8.cc/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="renderer" content="webkit">
+
+<meta name="mobile-agent" content="format=html5;url=http://m.zhibo8.cc/">
+<title>直播吧</title>
+<meta name="keywords" content="直播吧,NBA,足球,体育,直播8,zhibo8,zhiboba">
+<meta name="Description" content="直播吧是知名体育平台,主要为足球迷,篮球迷等提供直播,新闻资讯,数据,论坛社区,原创报道,视频集锦等服务">
+<meta property="qh.webmaster" content="52f504981c456">
+<meta name="apple-itunes-app" content="app-id=1221949580">
+<meta name="_globalsign-domain-verification" content="PPZfTtJvqdPkFgJVjpa151m3awmDFxNXhDQ5uw92l0">    <script src="./zhibob_files/hm.js.下载"></script><script src="./zhibob_files/mobile_jump.js.下载" type="text/javascript"></script>
+    <script src="./zhibob_files/ad.js.下载" type="text/javascript"></script><style type="text/css" abt="234"></style>
+    <link rel="stylesheet" type="text/css" href="./zhibob_files/reset.css">
+    <link rel="stylesheet" type="text/css" href="./zhibob_files/common.css">
+<script>//console.log('a')
+</script><script>//remove 17173 video ad
+doAdblock();
+function doAdblock(){
+    (function() {
+        function A() {}
+        A.prototype = {
+            rules: {
+                '17173_in':{
+                    'find':/http:\/\/f\.v\.17173cdn\.com\/(\d+\/)?flash\/PreloaderFile(Customer)?\.swf/,
+                    'replace':"http://swf.adtchrome.com/17173_in_20150522.swf"
+                },
+                '17173_out':{
+                    'find':/http:\/\/f\.v\.17173cdn\.com\/(\d+\/)?flash\/PreloaderFileFirstpage\.swf/,
+                    'replace':"http://swf.adtchrome.com/17173_out_20150522.swf"
+                },
+                '17173_live':{
+                    'find':/http:\/\/f\.v\.17173cdn\.com\/(\d+\/)?flash\/Player_stream(_firstpage)?\.swf/,
+                    'replace':"http://swf.adtchrome.com/17173_stream_20150522.swf"
+                },
+                '17173_live_out':{
+                    'find':/http:\/\/f\.v\.17173cdn\.com\/(\d+\/)?flash\/Player_stream_(custom)?Out\.swf/,
+                    'replace':"http://swf.adtchrome.com/17173.out.Live.swf"
+                }
+            },
+            _done: null,
+            get done() {
+                if(!this._done) {
+                    this._done = new Array();
+                }
+                return this._done;
+            },
+            addAnimations: function() {
+                var style = document.createElement('style');
+                style.type = 'text/css';
+                style.innerHTML = 'object,embed{\
+                -webkit-animation-duration:.001s;-webkit-animation-name:playerInserted;\
+                -ms-animation-duration:.001s;-ms-animation-name:playerInserted;\
+                -o-animation-duration:.001s;-o-animation-name:playerInserted;\
+                animation-duration:.001s;animation-name:playerInserted;}\
+                @-webkit-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}\
+                @-ms-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}\
+                @-o-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}\
+                @keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}';
+                document.getElementsByTagName('head')[0].appendChild(style);
+            },
+            animationsHandler: function(e) {
+                if(e.animationName === 'playerInserted') {
+                    this.replace(e.target);
+                }
+            },
+            replace: function(elem) {
+                if(this.done.indexOf(elem) != -1) return;
+                this.done.push(elem);
+                var player = elem.data || elem.src;
+                if(!player) return;
+                var i, find, replace = false;
+                for(i in this.rules) {
+                    find = this.rules[i]['find'];
+                    if(find.test(player)) {
+                        replace = this.rules[i]['replace'];
+                        if('function' === typeof this.rules[i]['preHandle']) {
+                            this.rules[i]['preHandle'].bind(this, elem, find, replace, player)();
+                        }else{
+                            this.reallyReplace.bind(this, elem, find, replace)();
+                        }
+                        break;
+                    }
+                }
+            },
+            reallyReplace: function(elem, find, replace) {
+                elem.data && (elem.data = elem.data.replace(find, replace)) || elem.src && ((elem.src = elem.src.replace(find, replace)) && (elem.style.display = 'block'));
+                var b = elem.querySelector("param[name='movie']");
+                this.reloadPlugin(elem);
+            },
+            reloadPlugin: function(elem) {
+                var nextSibling = elem.nextSibling;
+                var parentNode = elem.parentNode;
+                parentNode.removeChild(elem);
+                var newElem = elem.cloneNode(true);
+                this.done.push(newElem);
+                if(nextSibling) {
+                    parentNode.insertBefore(newElem, nextSibling);
+                } else {
+                    parentNode.appendChild(newElem);
+                }
+            },
+            init: function() {
+                var handler = this.animationsHandler.bind(this);
+                document.body.addEventListener('webkitAnimationStart', handler, false);
+                document.body.addEventListener('msAnimationStart', handler, false);
+                document.body.addEventListener('oAnimationStart', handler, false);
+                document.body.addEventListener('animationstart', handler, false);
+                this.addAnimations();
+            }
+        };
+        new A().init();
+    })();
+}
+//remove baidu search ad
+if(document.URL.indexOf('www.baidu.com') >= 0){
+    if(document && document.getElementsByTagName && document.getElementById && document.body){
+        var aa = function(){
+            var all = document.body.querySelectorAll("#content_left div,#content_left table");
+            for(var i = 0; i < all.length; i++){
+                if(/display:\s?(table|block)\s!important/.test(all[i].getAttribute("style"))){all[i].style.display= "none";all[i].style.visibility='hidden';}
+            }
+            all = document.body.querySelectorAll('.result.c-container[id="1"]');
+            //if(all.length == 1) return;
+            for(var i = 0; i < all.length; i++){
+                if(all[i].innerHTML && all[i].innerHTML.indexOf('广告')>-1){
+                    all[i].style.display= "none";all[i].style.visibility='hidden';
+                }
+            }
+        }
+        aa();
+        document.getElementById('wrapper_wrapper').addEventListener('DOMSubtreeModified',aa)
+    };
+}
+//remove sohu video ad
+if (document.URL.indexOf("tv.sohu.com") >= 0){
+    if (document.cookie.indexOf("fee_status=true")==-1){document.cookie='fee_status=true'};
+}
+//remove 56.com video ad
+if (document.URL.indexOf("56.com") >= 0){
+    if (document.cookie.indexOf("fee_status=true")==-1){document.cookie='fee_status=true'};
+}
+//fore iqiyi enable html5 player function
+if (document.URL.indexOf("iqiyi.com") >= 0){
+    if (document.cookie.indexOf("player_forcedType=h5_VOD")==-1){
+        document.cookie='player_forcedType=h5_VOD'
+        if(localStorage.reloadTime && Date.now() - parseInt(localStorage.reloadTime)<60000){
+            console.log('no reload')
+        }else{
+            location.reload()
+            localStorage.reloadTime = Date.now();
+        }
+    }
+}
+</script><style type="text/css">object,embed{                -webkit-animation-duration:.001s;-webkit-animation-name:playerInserted;                -ms-animation-duration:.001s;-ms-animation-name:playerInserted;                -o-animation-duration:.001s;-o-animation-name:playerInserted;                animation-duration:.001s;animation-name:playerInserted;}                @-webkit-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}                @-ms-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}                @-o-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}                @keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}</style></head>
+<body>
+<div class="menu">
+    <div class="container">
+        <div class="logo">
+            <a title="直播吧" href="https://www.zhibo8.cc/"><img alt="直播吧" src="./zhibob_files/logo_o3x_02.png"></a>
+<!--            <a title="直播吧" href="//www.zhibo8.cc/"><img alt="直播吧" src="//static4style.qiumibao.com/common/img/logo_ny_2.gif"></a>-->
+        </div>
+        <div class="nav">
+            <ul>
+                <li><a href="https://www.zhibo8.cc/">首页</a></li>
+                <li><a href="https://bbs.zhibo8.cc/" target="_blank">论坛</a></li>
+                <li>
+                    <a href="https://www.zhibo8.cc/nba/" target="_blank">NBA视频</a>
+                    <ul class="child_navs">
+                        <li><a href="https://www.zhibo8.cc/nba/index_old.htm" target="_blank">旧版页面</a></li>
+                        <li><a href="https://www.zhibo8.cc/nba/luxiang.htm" target="_blank">录像页面</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="https://www.zhibo8.cc/zuqiu/" target="_blank">足球视频</a>
+                    <ul class="child_navs">
+                        <li><a href="https://www.zhibo8.cc/zuqiu/index_old.htm" target="_blank">旧版页面</a></li>
+                        <li><a href="https://www.zhibo8.cc/zuqiu/luxiang.htm" target="_blank">录像页面</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="https://news.zhibo8.cc/nba/" target="_blank">NBA新闻</a>
+                    <ul class="child_navs" style="display: none;">
+                        <li><a href="https://news.zhibo8.cc/nba/more.htm" target="_blank">滚动新闻</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="https://news.zhibo8.cc/zuqiu/" target="_blank">足球新闻</a>
+                    <ul class="child_navs">
+                        <li><a href="https://news.zhibo8.cc/zuqiu/more.htm" target="_blank">滚动新闻</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="https://tu.zhibo8.cc/" target="_blank">图片</a>
+                    <ul class="child_navs l_width">
+                        <li><a href="https://tu.zhibo8.cc/nba" target="_blank">NBA图片</a></li>
+                        <li><a href="https://tu.zhibo8.cc/zuqiu" target="_blank">足球图片</a></li>
+                    </ul>
+                </li>
+                <li><a href="https://news.zhibo8.cc/other/" target="_blank">综合</a></li>
+                <!--<li><a href="//www.zhibo8.cc/olympic/" target="_blank" >综合</a></li>-->
+<!--                <li><a href="//quanzi.zhibo8.cc/" target="_blank">圈子</a></li>-->
+                <li><a href="https://guess.zhibo8.cc/" target="_blank">竞猜</a></li>
+                <li><a href="http://www.188bifen.com/" target="_blank">比分</a></li>
+                <li>
+                    <a href="https://data.zhibo8.cc/pc_main_data/" target="_blank">数据</a>
+                    <ul class="child_navs l_width">
+                        <li><a href="https://data.zhibo8.cc/nbaData/database/#/" target="_blank">NBA资料库</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="https://data.zhibo8.cc/" target="_blank">资料</a>
+                </li>
+                <li>
+                    <a href="http://www.wanjiashe.com/" target="_blank">游戏</a>
+                    <ul class="child_navs l_width">
+                        <li><a href="http://skzc.wanjiashe.com/" target="_blank">实况中超</a></li>
+                        <li><a href="http://zcfy.wanjiashe.com/" target="_blank">中超风云</a></li>
+                        <li><a href="http://nbaftx.wanjiashe.com/" target="_blank">NBA范特西</a></li>
+                        <li><a href="http://kyzq.wanjiashe.com/" target="_blank">狂野足球</a></li>
+                        <li><a href="http://ftx2.wanjiashe.com/" target="_blank">范特西2</a></li>
+                        <li><a href="http://xdlq.wanjiashe.com/" target="_blank">兄弟篮球2</a></li>
+                        <li><a href="http://ogzq2.wanjiashe.com/" target="_blank">欧冠足球2</a></li>
+                        <li><a href="http://mklq.wanjiashe.com/" target="_blank">萌卡篮球</a></li>
+                        <li><a href="http://glgs.wanjiashe.com/" target="_blank">灌篮高手</a></li>
+                        <li><a href="http://zqds.wanjiashe.com/" target="_blank">足球大师2017</a></li>
+                    </ul>
+                </li>
+<!--                <li><a href="//www.zhibo8.cc/caipiao.htm" target="_blank">彩票</a></li>-->
+                <li><a href="https://home.zhibo8.cc/" target="_blank">个人</a></li>
+                <li class="new_ch"><a href="https://daogou.zhibo8.cc/" target="_blank">商城<span>new</span></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="container margin_top_20">
+    <div id="recommend" class="left">
+		<div class="r_video left"><ul><li class="head ico_fb"><a href="https://www.zhibo8.cc/zuqiu/" target="_blank">哥斯达黎加vs塞尔维亚 进球</a><span></span><a href="https://www.zhibo8.cc/zuqiu/2018/0617-hmsy.htm" target="_blank">豪门盛宴-点球！</a></li><li><a href="https://www.zhibo8.cc/zuqiu/2018/0617-b83d744-svideo.htm" target="_blank">直播吧2002回忆杀专访李铁</a><span>|</span><a href="https://www.zhibo8.cc/zuqiu/2018/0617-5220329-svideo.htm" target="_blank">路见不平！李毅这脚太解气</a></li><li><a href="https://www.zhibo8.cc/zuqiu/2018/0617-fenxi.htm" target="_blank">里奥小法希勒分析西葡大战</a><span>|</span><a href="https://www.zhibo8.cc/zuqiu/2018/0617-320daf7-svideo.htm" target="_blank">冰岛球迷协会讲述维京战吼</a></li><li><a href="https://www.zhibo8.cc/zuqiu/2018/0616-agengting-jijin.htm" target="_blank">阿根廷vs冰岛 集锦</a> <a href="https://www.zhibo8.cc/zuqiu/luxiang.htm" target="_blank">录像</a><span>|</span><a href="https://www.zhibo8.cc/zuqiu/2018/0616-faguo-jijin.htm" target="_blank">法国vs澳大利亚 集锦</a> <a href="https://www.zhibo8.cc/zuqiu/luxiang.htm" target="_blank">录像</a></li><li><a href="https://www.zhibo8.cc/zuqiu/2018/0617-keluodiya-jijin.htm" target="_blank">克罗地亚vs尼日利亚 集锦</a> <a href="https://www.zhibo8.cc/zuqiu/luxiang.htm" target="_blank">录像</a><span>|</span><a href="https://www.zhibo8.cc/zuqiu/2018/0617-danmai-jijin.htm" target="_blank">秘鲁vs丹麦 集锦</a> <a href="https://www.zhibo8.cc/zuqiu/luxiang.htm" target="_blank">录像</a></li><li><a href="https://www.zhibo8.cc/zuqiu/2018/0617-4b5b86a-svideo.htm" target="_blank">梅西点球被扑国内球迷砸电视</a><span>|</span><a href="https://www.zhibo8.cc/zuqiu/2018/0617-327d59d-svideo.htm" target="_blank">冰岛后卫兼职是盐厂工人</a></li><li><a href="https://www.zhibo8.cc/zuqiu/2018/0616-meixi2.htm" target="_blank">被冰岛逼平！梅西离场略落寞</a><span>|</span><a href="https://www.zhibo8.cc/zuqiu/2018/0616-shidian.htm" target="_blank">梅西点球被冰岛门将扑出</a></li><li><a href="https://www.zhibo8.cc/zuqiu/2018/0616-b2fa5cb-svideo.htm" target="_blank">世界杯广告来自冰岛门将之手</a><span>|</span><a href="https://www.zhibo8.cc/zuqiu/2018/0616-hmsy.htm" target="_blank">《豪门盛宴》-巨星登场</a></li></ul></div><div class="r_news right"><ul><li class="head "><a href="https://news.zhibo8.cc/zuqiu/" target="_blank">半场哥斯达黎加0-0塞尔维亚</a><span></span><a href="https://news.zhibo8.cc/zuqiu/2018-06-17/5b25afef48969.htm" target="_blank">复盘法国：解放波巴</a></li><li><a href="http://news.zhibo8.cc/zuqiu/2018-06-17/5b265ec462c25.htm" target="_blank">经纪人确认萨拉赫已完全恢复</a><span>|</span><a href="https://news.zhibo8.cc/zuqiu/2018-06-17/5b263804a0f54.htm" target="_blank">直播吧2002回忆杀专访李铁</a></li><li><a href="http://news.zhibo8.cc/zuqiu/2018-06-17/5b2616e234d6a.htm" target="_blank">直观世界杯：与熊为友羡煞人</a><span>|</span><a href="http://news.zhibo8.cc/zuqiu/2018-06-17/5b2621ec389ab.htm" target="_blank">以色列国防部长补刀阿根廷</a></li><li><a href="http://news.zhibo8.cc/zuqiu/2018-06-17/5b265ea9435d3.htm" target="_blank">金左脚！科拉罗夫任意球破门</a><span>|</span><a href="http://news.zhibo8.cc/zuqiu/2018-06-17/5b26552cedf42.htm" target="_blank">波巴进球更正为澳后卫乌龙   </a></li><li><a href="http://news.zhibo8.cc/zuqiu/2018-06-17/5b2644d01075b.htm" target="_blank">波巴：我是世上最受批评的人</a><span>|</span><a href="http://news.zhibo8.cc/zuqiu/2018-06-17/5b2631303d1c8.htm" target="_blank">C罗晒照祝迷你罗8岁生快</a></li><li><a href="http://news.zhibo8.cc/zuqiu/2018-06-17/5b263bce8a9b9.htm" target="_blank">中国记者遭嘲：你们又没出线</a><span>|</span><a href="https://news.zhibo8.cc/zuqiu/2018-06-17/5b2600e73bb01.htm" target="_blank">太太团：二娃二嫂幸福生活</a></li><li><a href="http://news.zhibo8.cc/zuqiu/2018-06-17/5b261cdf6168a.htm" target="_blank">阿斯民调：六成盼德赫亚替补</a><span>|</span><a href="https://news.zhibo8.cc/zuqiu/2018-06-17/5b26265541033.htm" target="_blank">隔墙：C罗进了，梅西没进</a></li><li><a href="http://news.zhibo8.cc/zuqiu/2018-06-17/5b2662ec63cfb.htm" target="_blank">本届任意球破门数已追平上届</a><span>|</span><a href="http://news.zhibo8.cc/zuqiu/2018-06-17/5b26643b26e4c.htm" target="_blank">内马尔INS：有梦不惧前行</a></li></ul></div><div class="line clear"></div>
+<div class="r_video left"><ul><li class="head ico_bb"><a href="https://www.zhibo8.cc/nba/" target="_blank">2018NBA总决赛微电影</a><span></span><a href="https://www.zhibo8.cc/nba/2018/0617-zjgr.htm" target="_blank">盘点本赛季各队最佳过人</a></li><li><a href="https://www.zhibo8.cc/nba/2018/0617-dunk5.htm" target="_blank">历史上五大最具羞辱式隔扣</a><span>|</span><a href="https://www.zhibo8.cc/nba/2018/0617-klay.htm" target="_blank">残暴！汤普森生涯十佳球</a></li><li><a href="https://www.zhibo8.cc/nba/2018/0617-jordan.htm" target="_blank">感人！96年夺冠乔丹纵情哭泣</a><span>|</span><a href="https://www.zhibo8.cc/nba/2018/0617-07bd64d-svideo.htm" target="_blank">天赋！东契奇赛季五佳球</a></li><li><a href="https://www.zhibo8.cc/nba/2018/0617-father.htm" target="_blank">我的爸爸是个超级英雄！</a><span>|</span><a href="https://www.zhibo8.cc/nba/2018/0617-kwy.htm" target="_blank">莱昂纳德2014总决赛长篇集锦</a></li><li><a href="https://www.zhibo8.cc/nba/2018/0617-7aa54db-svideo.htm" target="_blank">戏精！科比梅西的经典广告</a><span>|</span><a href="https://www.zhibo8.cc/nba/2018/0617-fbec6e5-svideo.htm" target="_blank">杜兰特哈登泡椒的单挑车轮战</a></li><li><a href="https://www.zhibo8.cc/nba/2018/0617-8857ad9-svideo.htm" target="_blank">盘点NBA的六对父子“雄兵”</a><span>|</span><a href="https://www.zhibo8.cc/nba/2018/0617-curry.htm" target="_blank">库里生涯首秀砍14分7助4断</a></li><li><a href="https://www.zhibo8.cc/nba/2018/0617-c9d90bb-svideo.htm" target="_blank">看呆！站着投三分妹纸了解下</a><span>|</span><a href="https://www.zhibo8.cc/nba/2018/0617-smart.htm" target="_blank">恶搞金像奖最佳男主斯玛特</a></li><li><a href="https://www.zhibo8.cc/nba/2018/0617-206dab6-svideo.htm" target="_blank">科比亲述小罗如何介绍梅西</a><span>|</span><a href="https://www.zhibo8.cc/nba/2018/0617-d766e94-svideo.htm" target="_blank">韦德与C罗不同版本Raise it</a></li></ul></div><div class="r_news right"><ul><li class="head "><a href="https://news.zhibo8.cc/nba/" target="_blank">美记：太阳有意获得小卡</a><span></span><a href="https://news.zhibo8.cc/nba/2018-06-17/5b259ae596b56.htm" target="_blank">奥胖：詹姆斯已是传奇</a></li><li><a href="https://news.zhibo8.cc/nba/2018-06-17/5b25a7846d710.htm" target="_blank">奥尼尔：莱昂纳德还没发声</a><span>|</span><a href="https://news.zhibo8.cc/nba/2018-06-17/5b25da5626f76.htm" target="_blank">热评：这是你们说的海军上将</a></li><li><a href="https://news.zhibo8.cc/nba/2018-06-17/5b25a245e4cd3.htm" target="_blank">美记：小卡准备签新球鞋合同</a><span>|</span><a href="https://news.zhibo8.cc/nba/2018-06-17/5b259d7058672.htm" target="_blank">朗佐接受左膝富血小板注射</a></li><li><a href="https://news.zhibo8.cc/nba/2018-06-16/5b2530d69d51d.htm" target="_blank">火花在节目上澄清湖人时期误会</a><span>|</span><a href="https://news.zhibo8.cc/nba/2018-06-17/5b25433d3f4cf.htm" target="_blank">JJ-希克森入室抢劫被捕</a></li><li><a href="https://news.zhibo8.cc/nba/2018-06-17/5b257bfc86cf8.htm" target="_blank">跟队记者：太阳不会交易状元签</a><span>|</span><a href="https://news.zhibo8.cc/nba/2018-06-17/5b2581093889b.htm" target="_blank">欧文：本来可以赶上东决</a></li><li><a href="https://news.zhibo8.cc/nba/2018-06-17/5b257a716a136.htm" target="_blank">Woj：迪文岑佐等被邀请进绿屋</a><span>|</span><a href="https://news.zhibo8.cc/nba/2018-06-17/5b259bd4b0bf3.htm" target="_blank">湖人可能用朗佐换詹姆斯</a></li><li><a href="https://news.zhibo8.cc/nba/2018-06-17/5b258c6279f41.htm" target="_blank">汤爹：克莱本来会是四分卫</a><span>|</span><a href="https://news.zhibo8.cc/nba/2018-06-17/5b2585ae0871c.htm" target="_blank">魔兽：选12号是想做反面邓肯</a></li><li><a href="https://news.zhibo8.cc/nba/2018-06-17/5b25829318b44.htm" target="_blank">欧文谈与詹姆斯打球的压力</a><span>|</span><a href="https://news.zhibo8.cc/nba/2018-06-17/5b25549d9d840.htm" target="_blank">阿里扎寻求年薪1200万的合同</a></li></ul></div>    </div>
+    <div id="ad_box" class="right">
+        <div class="ad_box_250">
+            
+        </div>
+        <div class="other">
+			<ul><li><a tid="21471" href="https://tu.zhibo8.cc/nba" target="_blank">祝天下所有父亲节日快乐</a><span>|</span><a tid="32984" href="https://tu.zhibo8.cc/home/album/41446" target="_blank">港版苍老师</a></li><li><a tid="8422" href="https://bbs.zhibo8.cc/forum/topic?tid=2358757" target="_blank">波波和禅师的地位</a><span>|</span><a tid="19681" href="https://bbs.zhibo8.cc/forum/topic?tid=2362112" target="_blank">克莱独自带队的效果</a></li><li><a tid="83" href="https://news.zhibo8.cc/zuqiu/2018-02-26/5a93b317643d9.htm" target="_blank">直播吧编辑招聘</a><span>|</span><a tid="19680" href="https://bbs.zhibo8.cc/forum/topic?tid=2363674" target="_blank">解析梅罗之间的差距</a></li><li><a tid="20619" href="https://bbs.zhibo8.cc/forum/topic?tid=2363211" target="_blank">有机会夺冠的球队</a><span>|</span><a tid="20620" href="https://bbs.zhibo8.cc/forum/topic?tid=2363675" target="_blank">给梅罗的首秀打分</a></li><li><a tid="18895" href="https://tu.zhibo8.cc/zuqiu" target="_blank">韩美女再现世界杯</a><span>|</span><a tid="19682" href="https://tu.zhibo8.cc/home/album/41418" target="_blank">佩嫂三连拍妩媚背影</a></li></ul>        </div>
+    </div>
+</div>
+
+<div class="container margin_top_10 ovs">
+    <div class="schedule_container left">
+		 <div class="box">
+        <div class="titlebar">
+          <h2 title="2018-06-17">06月17日 星期日</h2>
+        <div class="c_cat"><div class="c_nav"><a class="current" href="javascript:;"><span style="background-position:-11px -8px;"></span>全部</a><a href="javascript:;"><span style="background-position:-36px -8px;"></span>重要</a><a href="javascript:;"><span style="background-position:-61px -8px;"></span>足球</a><a href="javascript:;"><span style="background-position:-86px -8px;"></span>篮球</a><a href="javascript:;"><span style="background-position:-165px -8px"></span>电竞</a><a class="c_shaixuan" href="javascript:;"><span style="background-position:-111px -8px;"></span>筛选</a></div><div class="c_wrap" style="display: none;"><div class="c_btm"><span class="c_all" value="全部赛事" style="font-weight: 900;">全部赛事</span> <span value="CCTV5直播">CCTV5</span><font class="c_cls">关闭筛选框</font></div><div class="list"><div class="items c_first"><span class="i_first" value="足球,中超,英超,西甲,德甲,意甲,法甲,俄超">足球</span><span value="世界杯">世界杯</span><span value="亚洲杯">亚洲杯</span><span value="中超,足协">中超</span><span value="英超,足总杯,联赛杯,社区盾">英超</span><span value="西甲,国王杯,西班牙超级杯">西甲</span><span value="意甲,意大利杯,意大利超级杯">意甲</span><span value="德甲,德国杯,德国超级杯">德甲</span><span value="欧冠,欧洲冠军">欧冠</span><span value="皇马,皇家马德里">皇马</span><span value="巴萨,巴塞罗那">巴萨</span><span value="曼联,曼彻斯特联">曼联</span><span value="曼城,曼彻斯特城">曼城</span><span value="阿森纳">阿森纳</span><span value="切尔西">切尔西</span><span value="利物浦">利物浦</span><span value="AC米兰">AC米兰</span><span value="国际米兰,国米">国际米兰</span><span value="尤文">尤文图斯</span><span value="拜仁">拜仁</span><span value="恒大">恒大</span><span value="中国男足,国足">中国男足</span><span value="亚冠,亚洲冠军">亚冠</span><span value="法甲,法国杯">法甲</span><span value="欧联杯,欧罗巴">欧联杯</span><span value="中甲">中甲</span></div><div class="items c_second"><span class="i_first" value="NBA,CBA,篮,lanqiubifen,ncaa,sbl">篮球</span><span value="NBA">NBA</span><span value="CBA">CBA</span><span value="勇士">勇士</span><span value="骑士">骑士</span><span value="湖人">湖人</span><span value="热火">热火</span><span value="火箭">火箭</span><span value="雷霆">雷霆</span><span value="公牛">公牛</span><span value="凯尔特人">凯尔特人</span><span value="尼克斯">尼克斯</span><span value="快船">快船</span><span value="小牛">小牛</span><span value="马刺">马刺</span><span value="篮网,网队">篮网</span><span value="森林狼">森林狼</span><span value="灰熊">灰熊</span><span value="掘金">掘金</span><span value="爵士">爵士</span><span value="开拓者">开拓者</span><span value="步行者">步行者</span><span value="老鹰">老鹰</span><span value="雄鹿">雄鹿</span><span value="广东">广东</span><span value="美国男篮">美国男篮</span><span value="中国男篮">中国男篮</span></div><div class="items c_third"><span class="i_first">其他</span><span value="F1">F1</span><span value="网球,澳网,温网,法网,美网,ATP,WTA">网球</span><span value="斯诺克,台球,桌球">斯诺克</span><span value="NFL">NFL</span><span value="MLB">MLB</span><span value="NHL">NHL</span><span value="拳">拳击</span><span value="UFC">UFC</span><span value="高尔夫">高尔夫</span><span value="田径,田联">田径</span><span value="排球,男排,女排">排球</span><span value="羽,苏迪曼杯,尤伯杯">羽毛球</span><span value="乒">乒乓球</span><span value="游戏">电竞</span></div></div></div></div></div>
+        <div class="content">
+          <ul>
+<li label="中乙,深圳雷曼,苏州东吴,足球" id="saishi121894" data-time="2018-06-17 19:30">19:30 中乙第12轮 苏州东吴 <span style="font-weight: bold;">0 - 0</span> 深圳雷曼 <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0617121894.htm" target="_blank">体育直播</a> <a href="http://wenzi.zhibo8.cc/zhibo/zuqiu/2018/0617121894.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="世界杯,哥斯达黎加,塞尔维亚,篮球,NBA,足球" id="saishi114311" data-time="2018-06-17 20:00">20:00 <b>世界杯小组赛E组 哥斯达黎加 <img src="./zhibob_files/gesidalijia.png"> <span style="font-weight: bold;">0 - 1</span> <img src="./zhibob_files/saierweiya.png"> 塞尔维亚</b> <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0617114311.htm" target="_blank">CCTV5 优酷 北体 广体 上体</a> <a href="https://wenzi.zhibo8.cc/zhibo/zuqiu/2018/0617114311.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="F1,其他" id="saishi125559" data-time="2018-06-17 22:00">22:00 F1摩托艇世界锦标赛伦敦大奖赛 <a href="https://www.zhibo8.cc/zhibo/other/2018/0617125559.htm" target="_blank">QQ直播</a> <a href="https://wenzi.zhibo8.cc/zhibo/other/2018/0617125559.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://nbazc.wanjiashe.com/game.php?sid=3" target="_blank">NBA征程3服</a> <a href="http://mklq.wanjiashe.com/?zhibo" target="_blank">萌卡篮球新服</a> </li>
+<li label="世界杯,德国,墨西哥,篮球,NBA,足球" id="saishi114316" data-time="2018-06-17 23:00">23:00 <b>世界杯小组赛F组 德国 <img src="./zhibob_files/deguo.png"> <span style="font-weight: bold;"> - </span> <img src="./zhibob_files/moxige.png"> 墨西哥</b> <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0618114316.htm" target="_blank">CCTV5 优酷 CCTV1 北体 广体 上体</a> <a href="https://wenzi.zhibo8.cc/zhibo/zuqiu/2018/0618114316.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="高尔夫,其他" id="saishi125336" data-time="2018-06-17 23:30">23:30 美国高尔夫公开赛-第四轮 <a href="https://www.zhibo8.cc/zhibo/other/2018/0617125336.htm" target="_blank">CCTV5+</a> <a href="https://wenzi.zhibo8.cc/zhibo/other/2018/0617125336.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://nbazc.wanjiashe.com/game.php?sid=3" target="_blank">NBA征程3服</a> <a href="http://mklq.wanjiashe.com/?zhibo" target="_blank">萌卡篮球新服</a> </li>
+ </ul>
+        </div>
+      </div>
+<div class="advert"></div>
+ <div class="box">
+        <div class="titlebar">
+          <h2 title="2018-06-18">06月18日 星期一</h2>
+        </div>
+        <div class="content">
+          <ul>
+<li label="世界杯,巴西,瑞士,篮球,NBA,足球" id="saishi114310" data-time="2018-06-18 02:00">02:00 <b>世界杯小组赛E组 巴西 <img src="./zhibob_files/baxi.png"> <span style="font-weight: bold;"> - </span> <img src="./zhibob_files/ruishi.png"> 瑞士</b> <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0617114310.htm" target="_blank">CCTV5 优酷 北体 广体 上体</a> <a href="http://wenzi.zhibo8.cc/zhibo/zuqiu/2018/0617114310.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="其他,足球,智利天主大学,科布雷洛" id="saishi125689" data-time="2018-06-18 04:15">04:15 智利杯 智利天主大学 <span style="font-weight: bold;"> - </span> 科布雷洛 <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0618125689.htm" target="_blank">体育直播</a> <a href="https://wenzi.zhibo8.cc/zhibo/zuqiu/2018/0618125689.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="排球,其他,中国男排,意大利男排" id="saishi125664" data-time="2018-06-18 04:30">04:30 世界男排联赛 中国男排 <span style="font-weight: bold;"> - </span> 意大利男排 <a href="https://www.zhibo8.cc/zhibo/other/2018/0618125664.htm" target="_blank">CCTV5</a> <a href="https://wenzi.zhibo8.cc/zhibo/other/2018/0618125664.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://nbazc.wanjiashe.com/game.php?sid=3" target="_blank">NBA征程3服</a> <a href="http://mklq.wanjiashe.com/?zhibo" target="_blank">萌卡篮球新服</a> </li>
+<li label="其他,足球,奥达斯,科金博" id="saishi125690" data-time="2018-06-18 07:00">07:00 智利杯 奥达斯 <span style="font-weight: bold;"> - </span> 科金博 <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0618125690.htm" target="_blank">体育直播</a> <a href="https://wenzi.zhibo8.cc/zhibo/zuqiu/2018/0618125690.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="其他" id="saishi125667" data-time="2018-06-18 10:00">10:00 中华龙舟大赛-福州站 <a href="https://www.zhibo8.cc/zhibo/other/2018/0618125667.htm" target="_blank">CCTV5+</a> <a href="https://wenzi.zhibo8.cc/zhibo/other/2018/0618125667.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://nbazc.wanjiashe.com/game.php?sid=3" target="_blank">NBA征程3服</a> <a href="http://mklq.wanjiashe.com/?zhibo" target="_blank">萌卡篮球新服</a> </li>
+<li label="豪门盛宴,足球" id="saishi125660" data-time="2018-06-18 17:30">17:30 <b>豪门盛宴 豪门盛宴 <img src="./zhibob_files/haomenshengyan.png"> <span style="font-weight: bold;"> - </span> <img src="./zhibob_files/haomenshengyan.png"> 豪门盛宴</b> <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0618125660.htm" target="_blank">CCTV1</a> <a href="https://wenzi.zhibo8.cc/zhibo/zuqiu/2018/0618125660.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="世界杯,瑞典,韩国,篮球,NBA,足球" id="saishi114317" data-time="2018-06-18 20:00">20:00 <b>世界杯小组赛F组 瑞典 <img src="./zhibob_files/ruidian.png"> <span style="font-weight: bold;"> - </span> <img src="./zhibob_files/hanguo.png"> 韩国</b> <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0618114317.htm" target="_blank">CCTV5 北体 广体 上体</a> <a href="http://wenzi.zhibo8.cc/zhibo/zuqiu/2018/0618114317.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="排球,其他,美国男排,塞尔维亚男排" id="saishi125668" data-time="2018-06-18 20:15">20:15 世界男排联赛 美国男排 <span style="font-weight: bold;"> - </span> 塞尔维亚男排 <a href="https://www.zhibo8.cc/zhibo/other/2018/0618125668.htm" target="_blank">CCTV5+</a> <a href="https://wenzi.zhibo8.cc/zhibo/other/2018/0618125668.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://nbazc.wanjiashe.com/game.php?sid=3" target="_blank">NBA征程3服</a> <a href="http://mklq.wanjiashe.com/?zhibo" target="_blank">萌卡篮球新服</a> </li>
+<li label="世界杯,比利时,巴拿马,篮球,NBA,足球" id="saishi114322" data-time="2018-06-18 23:00">23:00 <b>世界杯小组赛G组 比利时 <img src="./zhibob_files/bilishi.png"> <span style="font-weight: bold;"> - </span> <img src="./zhibob_files/banama.png"> 巴拿马</b> <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0618114322.htm" target="_blank">CCTV5 CCTV1 北体 广体 上体</a> <a href="http://wenzi.zhibo8.cc/zhibo/zuqiu/2018/0618114322.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="高尔夫,其他" id="saishi125669" data-time="2018-06-18 23:20">23:20 美国高尔夫公开赛-第一轮 <a href="https://www.zhibo8.cc/zhibo/other/2018/0618125669.htm" target="_blank">CCTV5+</a> <a href="https://wenzi.zhibo8.cc/zhibo/other/2018/0618125669.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://nbazc.wanjiashe.com/game.php?sid=3" target="_blank">NBA征程3服</a> <a href="http://mklq.wanjiashe.com/?zhibo" target="_blank">萌卡篮球新服</a> </li>
+ </ul>
+        </div>
+      </div>
+<div class="advert"></div>
+ <div class="box">
+        <div class="titlebar">
+          <h2 title="2018-06-19">06月19日 星期二</h2>
+        </div>
+        <div class="content">
+          <ul>
+<li label="世界杯,英格兰,突尼斯,篮球,NBA,足球" id="saishi114323" data-time="2018-06-19 02:00">02:00 <b>世界杯小组赛G组 突尼斯 <img src="./zhibob_files/tunisi.png"> <span style="font-weight: bold;"> - </span> <img src="./zhibob_files/yinggelan.png"> 英格兰</b> <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0619114323.htm" target="_blank">CCTV5 CCTV1 北体 广体 上体</a> <a href="https://wenzi.zhibo8.cc/zhibo/zuqiu/2018/0619114323.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="排球,其他,澳大利亚男排,中国男排" id="saishi125665" data-time="2018-06-19 04:30">04:30 世界男排联赛 澳大利亚男排 <span style="font-weight: bold;"> - </span> 中国男排 <a href="https://www.zhibo8.cc/zhibo/other/2018/0619125665.htm" target="_blank">CCTV5</a> <a href="https://wenzi.zhibo8.cc/zhibo/other/2018/0619125665.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://nbazc.wanjiashe.com/game.php?sid=3" target="_blank">NBA征程3服</a> <a href="http://mklq.wanjiashe.com/?zhibo" target="_blank">萌卡篮球新服</a> </li>
+<li label="豪门盛宴,足球" id="saishi125661" data-time="2018-06-19 17:30">17:30 <b>豪门盛宴 豪门盛宴 <img src="./zhibob_files/haomenshengyan.png"> <span style="font-weight: bold;"> - </span> <img src="./zhibob_files/haomenshengyan.png"> 豪门盛宴</b> <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0619125661.htm" target="_blank">CCTV1</a> <a href="https://wenzi.zhibo8.cc/zhibo/zuqiu/2018/0619125661.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="世界杯,哥伦比亚,日本,篮球,NBA,足球" id="saishi114329" data-time="2018-06-19 20:00">20:00 <b>世界杯小组赛H组 哥伦比亚 <img src="./zhibob_files/gelunbiya.png"> <span style="font-weight: bold;"> - </span> <img src="./zhibob_files/riben.png"> 日本</b> <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0619114329.htm" target="_blank">CCTV5 北体 广体 上体</a> <a href="https://wenzi.zhibo8.cc/zhibo/zuqiu/2018/0619114329.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="世界杯,波兰,塞内加尔,篮球,NBA,足球" id="saishi114328" data-time="2018-06-19 23:00">23:00 <b>世界杯小组赛H组 波兰 <img src="./zhibob_files/bolan.png"> <span style="font-weight: bold;"> - </span> <img src="./zhibob_files/saineijiaer.png"> 塞内加尔</b> <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0619114328.htm" target="_blank">CCTV5 CCTV1 北体 广体 上体</a> <a href="https://wenzi.zhibo8.cc/zhibo/zuqiu/2018/0619114328.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="高尔夫,其他" id="saishi125670" data-time="2018-06-19 23:05">23:05 美国高尔夫公开赛-第二轮 <a href="https://www.zhibo8.cc/zhibo/other/2018/0619125670.htm" target="_blank">CCTV5+</a> <a href="https://wenzi.zhibo8.cc/zhibo/other/2018/0619125670.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://nbazc.wanjiashe.com/game.php?sid=3" target="_blank">NBA征程3服</a> <a href="http://mklq.wanjiashe.com/?zhibo" target="_blank">萌卡篮球新服</a> </li>
+ </ul>
+        </div>
+      </div>
+<div class="advert"></div>
+ <div class="box">
+        <div class="titlebar">
+          <h2 title="2018-06-20">06月20日 星期三</h2>
+        </div>
+        <div class="content">
+          <ul>
+<li label="世界杯,埃及,俄罗斯,篮球,NBA,足球" id="saishi114288" data-time="2018-06-20 02:00">02:00 <b>世界杯小组赛A组 俄罗斯 <img src="./zhibob_files/eluosi.png"> <span style="font-weight: bold;"> - </span> <img src="./zhibob_files/aiji.png"> 埃及</b> <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0620114288.htm" target="_blank">CCTV5 CCTV1 北体 广体 上体</a> <a href="https://wenzi.zhibo8.cc/zhibo/zuqiu/2018/0620114288.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="排球,其他,韩国男排,中国男排" id="saishi125666" data-time="2018-06-20 04:30">04:30 世界男排联赛 韩国男排 <span style="font-weight: bold;"> - </span> 中国男排 <a href="https://www.zhibo8.cc/zhibo/other/2018/0620125666.htm" target="_blank">CCTV5</a> <a href="https://wenzi.zhibo8.cc/zhibo/other/2018/0620125666.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://nbazc.wanjiashe.com/game.php?sid=3" target="_blank">NBA征程3服</a> <a href="http://mklq.wanjiashe.com/?zhibo" target="_blank">萌卡篮球新服</a> </li>
+<li label="MLB,其他,响尾蛇,天使" id="saishi125560" data-time="2018-06-20 10:07">10:07 MLB常规赛 响尾蛇 <span style="font-weight: bold;"> - </span> 天使 <a href="https://www.zhibo8.cc/zhibo/other/2018/0620125560.htm" target="_blank">QQ直播</a> <a href="https://wenzi.zhibo8.cc/zhibo/other/2018/0620125560.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://nbazc.wanjiashe.com/game.php?sid=3" target="_blank">NBA征程3服</a> <a href="http://mklq.wanjiashe.com/?zhibo" target="_blank">萌卡篮球新服</a> </li>
+<li label="豪门盛宴,足球" id="saishi125662" data-time="2018-06-20 17:30">17:30 <b>豪门盛宴 豪门盛宴 <img src="./zhibob_files/haomenshengyan.png"> <span style="font-weight: bold;"> - </span> <img src="./zhibob_files/haomenshengyan.png"> 豪门盛宴</b> <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0620125662.htm" target="_blank">CCTV1</a> <a href="https://wenzi.zhibo8.cc/zhibo/zuqiu/2018/0620125662.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="世界杯,葡萄牙,摩洛哥,篮球,NBA,足球" id="saishi114294" data-time="2018-06-20 20:00">20:00 <b>世界杯小组赛B组 葡萄牙 <img src="./zhibob_files/putaoya.png"> <span style="font-weight: bold;"> - </span> <img src="./zhibob_files/moluoge.png"> 摩洛哥</b> <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0620114294.htm" target="_blank">CCTV5 北体 广体 上体</a> <a href="https://wenzi.zhibo8.cc/zhibo/zuqiu/2018/0620114294.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="其他" id="saishi125671" data-time="2018-06-20 21:30">21:30 男子冰球世界锦标赛冠亚军决赛 <a href="https://www.zhibo8.cc/zhibo/other/2018/0620125671.htm" target="_blank">CCTV5+</a> <a href="https://wenzi.zhibo8.cc/zhibo/other/2018/0620125671.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://nbazc.wanjiashe.com/game.php?sid=3" target="_blank">NBA征程3服</a> <a href="http://mklq.wanjiashe.com/?zhibo" target="_blank">萌卡篮球新服</a> </li>
+<li label="世界杯,乌拉圭,沙特,篮球,NBA,足球,沙特阿拉伯" id="saishi114289" data-time="2018-06-20 23:00">23:00 <b>世界杯小组赛A组 乌拉圭 <img src="./zhibob_files/wulagui.png"> <span style="font-weight: bold;"> - </span> <img src="./zhibob_files/shatealabo.png"> 沙特阿拉伯</b> <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0620114289.htm" target="_blank">CCTV5 CCTV1 北体 广体 上体</a> <a href="https://wenzi.zhibo8.cc/zhibo/zuqiu/2018/0620114289.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="高尔夫,其他" id="saishi125672" data-time="2018-06-20 23:05">23:05 美国高尔夫公开赛-第三轮 <a href="https://www.zhibo8.cc/zhibo/other/2018/0620125672.htm" target="_blank">CCTV5+</a> <a href="https://wenzi.zhibo8.cc/zhibo/other/2018/0620125672.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://nbazc.wanjiashe.com/game.php?sid=3" target="_blank">NBA征程3服</a> <a href="http://mklq.wanjiashe.com/?zhibo" target="_blank">萌卡篮球新服</a> </li>
+ </ul>
+        </div>
+      </div>
+<div class="advert"></div>
+ <div class="box">
+        <div class="titlebar">
+          <h2 title="2018-06-21">06月21日 星期四</h2>
+        </div>
+        <div class="content">
+          <ul>
+<li label="世界杯,西班牙,伊朗,篮球,NBA,足球" id="saishi114295" data-time="2018-06-21 02:00">02:00 <b>世界杯小组赛B组 伊朗 <img src="./zhibob_files/yilang.png"> <span style="font-weight: bold;"> - </span> <img src="./zhibob_files/xibanya.png"> 西班牙</b> <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0621114295.htm" target="_blank">CCTV5 CCTV1 北体 广体 上体</a> <a href="https://wenzi.zhibo8.cc/zhibo/zuqiu/2018/0621114295.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="MLB,其他,红袜,双城" id="saishi125562" data-time="2018-06-21 08:10">08:10 MLB常规赛 红袜 <span style="font-weight: bold;"> - </span> 双城 <a href="https://www.zhibo8.cc/zhibo/other/2018/0621125562.htm" target="_blank">QQ直播</a> <a href="https://wenzi.zhibo8.cc/zhibo/other/2018/0621125562.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://nbazc.wanjiashe.com/game.php?sid=3" target="_blank">NBA征程3服</a> <a href="http://mklq.wanjiashe.com/?zhibo" target="_blank">萌卡篮球新服</a> </li>
+<li label="豪门盛宴,足球" id="saishi125663" data-time="2018-06-21 17:30">17:30 <b>豪门盛宴 豪门盛宴 <img src="./zhibob_files/haomenshengyan.png"> <span style="font-weight: bold;"> - </span> <img src="./zhibob_files/haomenshengyan.png"> 豪门盛宴</b> <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0621125663.htm" target="_blank">CCTV1</a> <a href="https://wenzi.zhibo8.cc/zhibo/zuqiu/2018/0621125663.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="世界杯,丹麦,澳大利亚,篮球,NBA,足球" id="saishi114301" data-time="2018-06-21 20:00">20:00 <b>世界杯小组赛C组 丹麦 <img src="./zhibob_files/danmai.png"> <span style="font-weight: bold;"> - </span> <img src="./zhibob_files/aodaliya.png"> 澳大利亚</b> <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0621114301.htm" target="_blank">CCTV5 北体 广体 上体</a> <a href="https://wenzi.zhibo8.cc/zhibo/zuqiu/2018/0621114301.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="高尔夫,其他" id="saishi125673" data-time="2018-06-21 22:45">22:45 美国高尔夫公开赛-第四轮 <a href="https://www.zhibo8.cc/zhibo/other/2018/0621125673.htm" target="_blank">CCTV5+</a> <a href="https://wenzi.zhibo8.cc/zhibo/other/2018/0621125673.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://nbazc.wanjiashe.com/game.php?sid=3" target="_blank">NBA征程3服</a> <a href="http://mklq.wanjiashe.com/?zhibo" target="_blank">萌卡篮球新服</a> </li>
+<li label="世界杯,法国,秘鲁,篮球,NBA,足球" id="saishi114300" data-time="2018-06-21 23:00">23:00 <b>世界杯小组赛C组 法国 <img src="./zhibob_files/faguo.png"> <span style="font-weight: bold;"> - </span> <img src="./zhibob_files/bilu.png"> 秘鲁</b> <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0621114300.htm" target="_blank">CCTV5 CCTV1 北体 广体 上体</a> <a href="https://wenzi.zhibo8.cc/zhibo/zuqiu/2018/0621114300.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+ </ul>
+        </div>
+      </div>
+ <div class="box">
+        <div class="titlebar">
+          <h2 title="2018-06-22">06月22日 星期五</h2>
+        </div>
+        <div class="content">
+          <ul>
+<li label="世界杯,阿根廷,克罗地亚,篮球,NBA,足球" id="saishi114306" data-time="2018-06-22 02:00">02:00 <b>世界杯小组赛D组 阿根廷 <img src="./zhibob_files/agenting.png"> <span style="font-weight: bold;"> - </span> <img src="./zhibob_files/keluodiya.png"> 克罗地亚</b> <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0622114306.htm" target="_blank">CCTV5 CCTV1 北体 广体 上体</a> <a href="https://wenzi.zhibo8.cc/zhibo/zuqiu/2018/0622114306.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="NBA,篮球,选秀" id="saishi121637" data-time="2018-06-22 07:00">07:00 <b>NBA选秀大会 NBA <img src="./zhibob_files/NBA.png"> <span style="font-weight: bold;"> - </span> <img src="./zhibob_files/xuanxiu.png"> 选秀</b> <a href="https://www.zhibo8.cc/zhibo/nba/2018/0622121637.htm" target="_blank">等待更新 互动直播</a> <a href="https://wenzi.zhibo8.cc/zhibo/nba/2018/0622121637.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/lanqiubifen.htm" target="_blank">比分</a> <a href="http://nbazc.wanjiashe.com/game.php?sid=3" target="_blank">NBA征程3服</a> </li>
+<li label="豪门盛宴,足球" id="saishi125686" data-time="2018-06-22 17:30">17:30 <b>豪门盛宴 豪门盛宴 <img src="./zhibob_files/haomenshengyan.png"> <span style="font-weight: bold;"> - </span> <img src="./zhibob_files/haomenshengyan.png"> 豪门盛宴</b> <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0622125686.htm" target="_blank">CCTV1</a> <a href="https://wenzi.zhibo8.cc/zhibo/zuqiu/2018/0622125686.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="F1,其他" id="saishi125552" data-time="2018-06-22 18:00">18:00 F1法国大奖赛第一次练习赛 <a href="https://www.zhibo8.cc/zhibo/other/2018/0622125552.htm" target="_blank">QQ直播</a> <a href="https://wenzi.zhibo8.cc/zhibo/other/2018/0622125552.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://nbazc.wanjiashe.com/game.php?sid=3" target="_blank">NBA征程3服</a> <a href="http://mklq.wanjiashe.com/?zhibo" target="_blank">萌卡篮球新服</a> </li>
+<li label="排球,其他,中国男排,日本男排" id="saishi125674" data-time="2018-06-22 19:30">19:30 世界男排联赛 中国男排 <span style="font-weight: bold;"> - </span> 日本男排 <a href="https://www.zhibo8.cc/zhibo/other/2018/0622125674.htm" target="_blank">CCTV5+</a> <a href="https://wenzi.zhibo8.cc/zhibo/other/2018/0622125674.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://nbazc.wanjiashe.com/game.php?sid=3" target="_blank">NBA征程3服</a> <a href="http://mklq.wanjiashe.com/?zhibo" target="_blank">萌卡篮球新服</a> </li>
+<li label="世界杯,巴西,哥斯达黎加,篮球,NBA,足球" id="saishi114312" data-time="2018-06-22 20:00">20:00 <b>世界杯小组赛E组 巴西 <img src="./zhibob_files/baxi.png"> <span style="font-weight: bold;"> - </span> <img src="./zhibob_files/gesidalijia.png"> 哥斯达黎加</b> <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0622114312.htm" target="_blank">CCTV5 北体 广体 上体</a> <a href="https://wenzi.zhibo8.cc/zhibo/zuqiu/2018/0622114312.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="F1,其他" id="saishi125553" data-time="2018-06-22 22:00">22:00 F1法国大奖赛第二次练习赛 <a href="https://www.zhibo8.cc/zhibo/other/2018/0622125553.htm" target="_blank">QQ直播</a> <a href="https://wenzi.zhibo8.cc/zhibo/other/2018/0622125553.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://nbazc.wanjiashe.com/game.php?sid=3" target="_blank">NBA征程3服</a> <a href="http://mklq.wanjiashe.com/?zhibo" target="_blank">萌卡篮球新服</a> </li>
+<li label="世界杯,冰岛,尼日利亚,篮球,NBA,足球" id="saishi114307" data-time="2018-06-22 23:00">23:00 <b>世界杯小组赛D组 尼日利亚 <img src="./zhibob_files/niriliya.png"> <span style="font-weight: bold;"> - </span> <img src="./zhibob_files/bingdao.png"> 冰岛</b> <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0622114307.htm" target="_blank">CCTV5 CCTV1 北体 广体 上体</a> <a href="https://wenzi.zhibo8.cc/zhibo/zuqiu/2018/0622114307.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="排球,其他,美国男排,法国男排" id="saishi125675" data-time="2018-06-22 23:30">23:30 世界男排联赛 美国男排 <span style="font-weight: bold;"> - </span> 法国男排 <a href="https://www.zhibo8.cc/zhibo/other/2018/0622125675.htm" target="_blank">CCTV5+</a> <a href="https://wenzi.zhibo8.cc/zhibo/other/2018/0622125675.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://nbazc.wanjiashe.com/game.php?sid=3" target="_blank">NBA征程3服</a> <a href="http://mklq.wanjiashe.com/?zhibo" target="_blank">萌卡篮球新服</a> </li>
+ </ul>
+        </div>
+      </div>
+ <div class="box">
+        <div class="titlebar">
+          <h2 title="2018-06-23">06月23日 星期六</h2>
+        </div>
+        <div class="content">
+          <ul>
+<li label="世界杯,瑞士,塞尔维亚,篮球,NBA,足球" id="saishi114313" data-time="2018-06-23 02:00">02:00 <b>世界杯小组赛E组 塞尔维亚 <img src="./zhibob_files/saierweiya.png"> <span style="font-weight: bold;"> - </span> <img src="./zhibob_files/ruishi.png"> 瑞士</b> <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0623114313.htm" target="_blank">CCTV5 北体 上体 广体</a> <a href="https://wenzi.zhibo8.cc/zhibo/zuqiu/2018/0623114313.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="MLB,其他,红雀,酿酒人" id="saishi125563" data-time="2018-06-23 08:10">08:10 MLB常规赛 红雀 <span style="font-weight: bold;"> - </span> 酿酒人 <a href="https://www.zhibo8.cc/zhibo/other/2018/0623125563.htm" target="_blank">QQ直播</a> <a href="https://wenzi.zhibo8.cc/zhibo/other/2018/0623125563.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://nbazc.wanjiashe.com/game.php?sid=3" target="_blank">NBA征程3服</a> <a href="http://mklq.wanjiashe.com/?zhibo" target="_blank">萌卡篮球新服</a> </li>
+<li label="排球,其他,中国男排,日本男排" id="saishi125676" data-time="2018-06-23 14:35">14:35 世界男排联赛 中国男排 <span style="font-weight: bold;"> - </span> 日本男排 <a href="https://www.zhibo8.cc/zhibo/other/2018/0623125676.htm" target="_blank">CCTV5+</a> <a href="https://wenzi.zhibo8.cc/zhibo/other/2018/0623125676.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://nbazc.wanjiashe.com/game.php?sid=3" target="_blank">NBA征程3服</a> <a href="http://mklq.wanjiashe.com/?zhibo" target="_blank">萌卡篮球新服</a> </li>
+<li label="足球,中乙,长春百和嘉路喜,保定容大" id="saishi121896" data-time="2018-06-23 15:30">15:30 中乙第13轮 长春百和嘉路喜 <span style="font-weight: bold;"> - </span> 保定容大 <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0623121896.htm" target="_blank">等待更新</a> <a href="http://wenzi.zhibo8.cc/zhibo/zuqiu/2018/0623121896.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="足球,中乙,青岛中能,大连千兆" id="saishi121895" data-time="2018-06-23 15:30">15:30 中乙第13轮 青岛中能 <span style="font-weight: bold;"> - </span> 大连千兆 <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0623121895.htm" target="_blank">等待更新</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="足球,中乙,上海申梵,深圳鹏城" id="saishi121902" data-time="2018-06-23 16:00">16:00 中乙第13轮 上海申梵 <span style="font-weight: bold;"> - </span> 深圳鹏城 <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0623121902.htm" target="_blank">等待更新</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="足球,中乙,云南飞虎,合肥桂冠" id="saishi121901" data-time="2018-06-23 16:00">16:00 中乙第13轮 云南飞虎 <span style="font-weight: bold;"> - </span> 合肥桂冠 <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0623121901.htm" target="_blank">等待更新</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="足球,中乙,内蒙古草上飞,沈阳东进" id="saishi121900" data-time="2018-06-23 16:00">16:00 中乙第13轮 内蒙古草上飞 <span style="font-weight: bold;"> - </span> 沈阳东进 <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0623121900.htm" target="_blank">等待更新</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="足球,中乙,北京理工,盐城大丰" id="saishi121898" data-time="2018-06-23 16:00">16:00 中乙第13轮 北京理工 <span style="font-weight: bold;"> - </span> 盐城大丰 <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0623121898.htm" target="_blank">等待更新</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="足球,中乙,沈阳城市建设,宁夏山屿海" id="saishi121899" data-time="2018-06-23 16:00">16:00 中乙第13轮 沈阳城市建设 <span style="font-weight: bold;"> - </span> 宁夏山屿海 <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0623121899.htm" target="_blank">等待更新</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="足球,中乙,河北精英,陕西大秦之水" id="saishi121897" data-time="2018-06-23 16:00">16:00 中乙第13轮 河北精英 <span style="font-weight: bold;"> - </span> 陕西大秦之水 <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0623121897.htm" target="_blank">等待更新</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="足球,中乙,湖南湘涛华莱,南通支云" id="saishi121903" data-time="2018-06-23 16:30">16:30 中乙第13轮 湖南湘涛华莱 <span style="font-weight: bold;"> - </span> 南通支云 <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0623121903.htm" target="_blank">等待更新</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="其他" id="saishi125691" data-time="2018-06-23 18:30">18:30 拳击ONE冠军赛澳门站 <a href="https://www.zhibo8.cc/zhibo/other/2018/0623125691.htm" target="_blank">QQ直播</a> <a href="https://wenzi.zhibo8.cc/zhibo/other/2018/0623125691.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://nbazc.wanjiashe.com/game.php?sid=3" target="_blank">NBA征程3服</a> <a href="http://mklq.wanjiashe.com/?zhibo" target="_blank">萌卡篮球新服</a> </li>
+<li label="其他" id="saishi125554" data-time="2018-06-23 19:00">19:00 F1法国大奖赛第三次练习赛 <a href="https://www.zhibo8.cc/zhibo/other/2018/0623125554.htm" target="_blank">QQ直播</a> <a href="https://wenzi.zhibo8.cc/zhibo/other/2018/0623125554.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://nbazc.wanjiashe.com/game.php?sid=3" target="_blank">NBA征程3服</a> <a href="http://mklq.wanjiashe.com/?zhibo" target="_blank">萌卡篮球新服</a> </li>
+<li label="足球,中乙,四川安纳普尔那,苏州东吴" id="saishi121905" data-time="2018-06-23 19:30">19:30 中乙第13轮 四川安纳普尔那 <span style="font-weight: bold;"> - </span> 苏州东吴 <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0623121905.htm" target="_blank">等待更新</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="足球,中乙,深圳雷曼,海南海口" id="saishi121904" data-time="2018-06-23 19:30">19:30 中乙第13轮 深圳雷曼 <span style="font-weight: bold;"> - </span> 海南海口 <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0623121904.htm" target="_blank">等待更新</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="足球,中乙,福建天信,江西联盛国贸" id="saishi121907" data-time="2018-06-23 19:30">19:30 中乙第13轮 福建天信 <span style="font-weight: bold;"> - </span> 江西联盛国贸 <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0623121907.htm" target="_blank">等待更新</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="足球,中乙,镇江文旅,四川九牛" id="saishi121906" data-time="2018-06-23 19:30">19:30 中乙第13轮 镇江文旅 <span style="font-weight: bold;"> - </span> 四川九牛 <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0623121906.htm" target="_blank">等待更新</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="排球,其他,中国男排,加拿大男排" id="saishi125677" data-time="2018-06-23 19:30">19:30 世界男排联赛 中国男排 <span style="font-weight: bold;"> - </span> 加拿大男排 <a href="https://www.zhibo8.cc/zhibo/other/2018/0623125677.htm" target="_blank">CCTV5+</a> <a href="https://wenzi.zhibo8.cc/zhibo/other/2018/0623125677.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://nbazc.wanjiashe.com/game.php?sid=3" target="_blank">NBA征程3服</a> <a href="http://mklq.wanjiashe.com/?zhibo" target="_blank">萌卡篮球新服</a> </li>
+<li label="足球,中乙,淄博星期天,延边北国珲春" id="saishi121908" data-time="2018-06-23 19:35">19:35 中乙第13轮 淄博星期天 <span style="font-weight: bold;"> - </span> 延边北国珲春 <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0623121908.htm" target="_blank">等待更新</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="世界杯,比利时,突尼斯,篮球,NBA,足球" id="saishi114324" data-time="2018-06-23 20:00">20:00 <b>世界杯小组赛G组 比利时 <img src="./zhibob_files/bilishi.png"> <span style="font-weight: bold;"> - </span> <img src="./zhibob_files/tunisi.png"> 突尼斯</b> <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0624114324.htm" target="_blank">CCTV5 北体 上体 广体</a> <a href="https://wenzi.zhibo8.cc/zhibo/zuqiu/2018/0624114324.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="F1,其他,F1法国站,排位赛" id="saishi119166" data-time="2018-06-23 22:00">22:00 F1法国站排位赛 F1法国站 <span style="font-weight: bold;"> - </span> 排位赛 <a href="https://www.zhibo8.cc/zhibo/other/2018/0623119166.htm" target="_blank">CCTV5+</a> <a href="https://wenzi.zhibo8.cc/zhibo/other/2018/0623119166.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://nbazc.wanjiashe.com/game.php?sid=3" target="_blank">NBA征程3服</a> <a href="http://mklq.wanjiashe.com/?zhibo" target="_blank">萌卡篮球新服</a> </li>
+<li label="世界杯,墨西哥,韩国,篮球,NBA,足球" id="saishi114319" data-time="2018-06-23 23:00">23:00 <b>世界杯小组赛F组 韩国 <img src="./zhibob_files/hanguo.png"> <span style="font-weight: bold;"> - </span> <img src="./zhibob_files/moxige.png"> 墨西哥</b> <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0623114319.htm" target="_blank">CCTV5 北体 上体 广体</a> <a href="https://wenzi.zhibo8.cc/zhibo/zuqiu/2018/0623114319.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="排球,其他,美国男排,俄罗斯男排" id="saishi125678" data-time="2018-06-23 23:30">23:30 世界男排联赛 美国男排 <span style="font-weight: bold;"> - </span> 俄罗斯男排 <a href="https://www.zhibo8.cc/zhibo/other/2018/0623125678.htm" target="_blank">CCTV5+</a> <a href="https://wenzi.zhibo8.cc/zhibo/other/2018/0623125678.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://nbazc.wanjiashe.com/game.php?sid=3" target="_blank">NBA征程3服</a> <a href="http://mklq.wanjiashe.com/?zhibo" target="_blank">萌卡篮球新服</a> </li>
+ </ul>
+        </div>
+      </div>
+ <div class="box">
+        <div class="titlebar">
+          <h2 title="2018-06-24">06月24日 星期日</h2>
+        </div>
+        <div class="content">
+          <ul>
+<li label="世界杯,德国,瑞典,篮球,NBA,足球" id="saishi114318" data-time="2018-06-24 02:00">02:00 <b>世界杯小组赛F组 德国 <img src="./zhibob_files/deguo.png"> <span style="font-weight: bold;"> - </span> <img src="./zhibob_files/ruidian.png"> 瑞典</b> <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0623114318.htm" target="_blank">CCTV5 北体 上体 广体</a> <a href="https://wenzi.zhibo8.cc/zhibo/zuqiu/2018/0623114318.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="其他,蓝鸟,天使" id="saishi125564" data-time="2018-06-24 09:07">09:07 MLB常规赛 蓝鸟 <span style="font-weight: bold;"> - </span> 天使 <a href="https://www.zhibo8.cc/zhibo/other/2018/0624125564.htm" target="_blank">QQ直播</a> <a href="https://wenzi.zhibo8.cc/zhibo/other/2018/0624125564.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://nbazc.wanjiashe.com/game.php?sid=3" target="_blank">NBA征程3服</a> <a href="http://mklq.wanjiashe.com/?zhibo" target="_blank">萌卡篮球新服</a> </li>
+<li label="排球,其他,中国男排,塞尔维亚男排" id="saishi125680" data-time="2018-06-24 19:30">19:30 世界男排联赛 中国男排 <span style="font-weight: bold;"> - </span> 塞尔维亚男排 <a href="https://www.zhibo8.cc/zhibo/other/2018/0624125680.htm" target="_blank">CCTV5+</a> <a href="https://wenzi.zhibo8.cc/zhibo/other/2018/0624125680.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://nbazc.wanjiashe.com/game.php?sid=3" target="_blank">NBA征程3服</a> <a href="http://mklq.wanjiashe.com/?zhibo" target="_blank">萌卡篮球新服</a> </li>
+<li label="世界杯,英格兰,巴拿马,篮球,NBA,足球" id="saishi114325" data-time="2018-06-24 20:00">20:00 <b>世界杯小组赛G组 英格兰 <img src="./zhibob_files/yinggelan.png"> <span style="font-weight: bold;"> - </span> <img src="./zhibob_files/banama.png"> 巴拿马</b> <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0624114325.htm" target="_blank">CCTV5 北体 上体 广体</a> <a href="https://wenzi.zhibo8.cc/zhibo/zuqiu/2018/0624114325.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="F1,其他,F1法国站,正赛" id="saishi119165" data-time="2018-06-24 22:10">22:10 <b>F1法国站正赛 F1法国站 <img src="./zhibob_files/F1.png"> <span style="font-weight: bold;"> - </span> <img src="./zhibob_files/zhengsai.png"> 正赛</b> <a href="https://www.zhibo8.cc/zhibo/other/2018/0624119165.htm" target="_blank">CCTV5+ QQ</a> <a href="https://wenzi.zhibo8.cc/zhibo/other/2018/0624119165.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://nbazc.wanjiashe.com/game.php?sid=3" target="_blank">NBA征程3服</a> <a href="http://mklq.wanjiashe.com/?zhibo" target="_blank">萌卡篮球新服</a> </li>
+<li label="世界杯,塞内加尔,日本,篮球,NBA,足球" id="saishi114331" data-time="2018-06-24 23:00">23:00 <b>世界杯小组赛H组 日本 <img src="./zhibob_files/riben.png"> <span style="font-weight: bold;"> - </span> <img src="./zhibob_files/saineijiaer.png"> 塞内加尔</b> <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0625114331.htm" target="_blank">CCTV5 北体 上体 广体</a> <a href="https://wenzi.zhibo8.cc/zhibo/zuqiu/2018/0625114331.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+ </ul>
+        </div>
+      </div>
+ <div class="box">
+        <div class="titlebar">
+          <h2 title="2018-06-25">06月25日 星期一</h2>
+        </div>
+        <div class="content">
+          <ul>
+<li label="世界杯,波兰,哥伦比亚,篮球,NBA,足球" id="saishi114330" data-time="2018-06-25 02:00">02:00 <b>世界杯小组赛H组 波兰 <img src="./zhibob_files/bolan.png"> <span style="font-weight: bold;"> - </span> <img src="./zhibob_files/gelunbiya.png"> 哥伦比亚</b> <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0624114330.htm" target="_blank">CCTV5 北体 上体 广体</a> <a href="https://wenzi.zhibo8.cc/zhibo/zuqiu/2018/0624114330.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="世界杯,乌拉圭,俄罗斯,篮球,NBA,足球" id="saishi114290" data-time="2018-06-25 22:00">22:00 <b>世界杯小组赛A组 乌拉圭 <img src="./zhibob_files/wulagui.png"> <span style="font-weight: bold;"> - </span> <img src="./zhibob_files/eluosi.png"> 俄罗斯</b> <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0625114290.htm" target="_blank">等待更新</a> <a href="https://wenzi.zhibo8.cc/zhibo/zuqiu/2018/0625114290.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="世界杯,埃及,篮球,NBA,足球,沙特阿拉伯" id="saishi114291" data-time="2018-06-25 22:00">22:00 <b>世界杯小组赛A组 沙特阿拉伯 <img src="./zhibob_files/shatealabo.png"> <span style="font-weight: bold;"> - </span> <img src="./zhibob_files/aiji.png"> 埃及</b> <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0625114291.htm" target="_blank">等待更新</a> <a href="https://wenzi.zhibo8.cc/zhibo/zuqiu/2018/0625114291.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+ </ul>
+        </div>
+      </div>
+ <div class="box">
+        <div class="titlebar">
+          <h2 title="2018-06-26">06月26日 星期二</h2>
+        </div>
+        <div class="content">
+          <ul>
+<li label="世界杯,葡萄牙,伊朗,篮球,NBA,足球" id="saishi114296" data-time="2018-06-26 02:00">02:00 <b>世界杯小组赛B组 伊朗 <img src="./zhibob_files/yilang.png"> <span style="font-weight: bold;"> - </span> <img src="./zhibob_files/putaoya.png"> 葡萄牙</b> <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0626114296.htm" target="_blank">等待更新</a> <a href="https://wenzi.zhibo8.cc/zhibo/zuqiu/2018/0626114296.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="世界杯,西班牙,摩洛哥,篮球,NBA,足球" id="saishi114297" data-time="2018-06-26 02:00">02:00 <b>世界杯小组赛B组 西班牙 <img src="./zhibob_files/xibanya.png"> <span style="font-weight: bold;"> - </span> <img src="./zhibob_files/moluoge.png"> 摩洛哥</b> <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0626114297.htm" target="_blank">等待更新</a> <a href="https://wenzi.zhibo8.cc/zhibo/zuqiu/2018/0626114297.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="篮球,NBA,颁奖" id="saishi118066" data-time="2018-06-26 13:00">13:00 <b>NBA常规赛各项奖项颁奖典礼 NBA <img src="./zhibob_files/NBA.png"> <span style="font-weight: bold;"> - </span> <img src="./zhibob_files/banjiang.png"> 颁奖</b> <a href="https://www.zhibo8.cc/zhibo/nba/2018/0626118066.htm" target="_blank">等待更新</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/lanqiubifen.htm" target="_blank">比分</a> <a href="http://nbazc.wanjiashe.com/game.php?sid=3" target="_blank">NBA征程3服</a> </li>
+<li label="世界杯,法国,丹麦,篮球,NBA,足球" id="saishi114302" data-time="2018-06-26 22:00">22:00 <b>世界杯小组赛C组 丹麦 <img src="./zhibob_files/danmai.png"> <span style="font-weight: bold;"> - </span> <img src="./zhibob_files/faguo.png"> 法国</b> <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0626114302.htm" target="_blank">等待更新</a> <a href="https://wenzi.zhibo8.cc/zhibo/zuqiu/2018/0626114302.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="世界杯,秘鲁,澳大利亚,篮球,NBA,足球" id="saishi114303" data-time="2018-06-26 22:00">22:00 <b>世界杯小组赛C组 澳大利亚 <img src="./zhibob_files/aodaliya.png"> <span style="font-weight: bold;"> - </span> <img src="./zhibob_files/bilu.png"> 秘鲁</b> <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0626114303.htm" target="_blank">等待更新</a> <a href="https://wenzi.zhibo8.cc/zhibo/zuqiu/2018/0626114303.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+ </ul>
+        </div>
+      </div>
+ <div class="box">
+        <div class="titlebar">
+          <h2 title="2018-06-27">06月27日 星期三</h2>
+        </div>
+        <div class="content">
+          <ul>
+<li label="世界杯,克罗地亚,冰岛,篮球,NBA,足球" id="saishi114309" data-time="2018-06-27 02:00">02:00 <b>世界杯小组赛D组 冰岛 <img src="./zhibob_files/bingdao.png"> <span style="font-weight: bold;"> - </span> <img src="./zhibob_files/keluodiya.png"> 克罗地亚</b> <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0627114309.htm" target="_blank">等待更新</a> <a href="https://wenzi.zhibo8.cc/zhibo/zuqiu/2018/0627114309.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="世界杯,阿根廷,尼日利亚,篮球,NBA,足球" id="saishi114308" data-time="2018-06-27 02:00">02:00 <b>世界杯小组赛D组 尼日利亚 <img src="./zhibob_files/niriliya.png"> <span style="font-weight: bold;"> - </span> <img src="./zhibob_files/agenting.png"> 阿根廷</b> <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0627114308.htm" target="_blank">等待更新</a> <a href="https://wenzi.zhibo8.cc/zhibo/zuqiu/2018/0627114308.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="世界杯,墨西哥,瑞典,篮球,NBA,足球" id="saishi114321" data-time="2018-06-27 22:00">22:00 <b>世界杯小组赛F组 墨西哥 <img src="./zhibob_files/moxige.png"> <span style="font-weight: bold;"> - </span> <img src="./zhibob_files/ruidian.png"> 瑞典</b> <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0628114321.htm" target="_blank">等待更新</a> <a href="https://wenzi.zhibo8.cc/zhibo/zuqiu/2018/0628114321.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="世界杯,德国,韩国,篮球,NBA,足球" id="saishi114320" data-time="2018-06-27 22:00">22:00 <b>世界杯小组赛F组 韩国 <img src="./zhibob_files/hanguo.png"> <span style="font-weight: bold;"> - </span> <img src="./zhibob_files/deguo.png"> 德国</b> <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0628114320.htm" target="_blank">等待更新</a> <a href="https://wenzi.zhibo8.cc/zhibo/zuqiu/2018/0628114320.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+ </ul>
+        </div>
+      </div>
+ <div class="box">
+        <div class="titlebar">
+          <h2 title="2018-06-28">06月28日 星期四</h2>
+        </div>
+        <div class="content">
+          <ul>
+<li label="世界杯,巴西,塞尔维亚,篮球,NBA,足球" id="saishi114314" data-time="2018-06-28 02:00">02:00 <b>世界杯小组赛E组 塞尔维亚 <img src="./zhibob_files/saierweiya.png"> <span style="font-weight: bold;"> - </span> <img src="./zhibob_files/baxi.png"> 巴西</b> <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0627114314.htm" target="_blank">等待更新</a> <a href="https://wenzi.zhibo8.cc/zhibo/zuqiu/2018/0627114314.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="世界杯,瑞士,哥斯达黎加,篮球,NBA,足球" id="saishi114315" data-time="2018-06-28 02:00">02:00 <b>世界杯小组赛E组 瑞士 <img src="./zhibob_files/ruishi.png"> <span style="font-weight: bold;"> - </span> <img src="./zhibob_files/gesidalijia.png"> 哥斯达黎加</b> <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0627114315.htm" target="_blank">等待更新</a> <a href="https://wenzi.zhibo8.cc/zhibo/zuqiu/2018/0627114315.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="篮球,世预赛,中国男篮,韩国" id="saishi118664" data-time="2018-06-28 19:30">19:30 <b>男篮世界杯预选赛 中国男篮 <img src="./zhibob_files/zhongguo.png"> <span style="font-weight: bold;"> - </span> <img src="./zhibob_files/hanguo(1).png"> 韩国</b>   <a href="https://www.zhibo8.cc/zhibo/nba/2018/0628118664.htm" target="_blank">等待更新</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/lanqiubifen.htm" target="_blank">比分</a> <a href="http://nbazc.wanjiashe.com/game.php?sid=3" target="_blank">NBA征程3服</a> </li>
+<li label="世界杯,哥伦比亚,塞内加尔,篮球,NBA,足球" id="saishi114333" data-time="2018-06-28 22:00">22:00 <b>世界杯小组赛H组 塞内加尔 <img src="./zhibob_files/saineijiaer.png"> <span style="font-weight: bold;"> - </span> <img src="./zhibob_files/gelunbiya.png"> 哥伦比亚</b> <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0629114333.htm" target="_blank">等待更新</a> <a href="https://wenzi.zhibo8.cc/zhibo/zuqiu/2018/0629114333.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="世界杯,波兰,日本,篮球,NBA,足球" id="saishi114332" data-time="2018-06-28 22:00">22:00 <b>世界杯小组赛H组 日本 <img src="./zhibob_files/riben.png"> <span style="font-weight: bold;"> - </span> <img src="./zhibob_files/bolan.png"> 波兰</b> <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0629114332.htm" target="_blank">等待更新</a> <a href="https://wenzi.zhibo8.cc/zhibo/zuqiu/2018/0629114332.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+ </ul>
+        </div>
+      </div>
+ <div class="box">
+        <div class="titlebar">
+          <h2 title="2018-06-29">06月29日 星期五</h2>
+        </div>
+        <div class="content">
+          <ul>
+<li label="世界杯,突尼斯,巴拿马,篮球,NBA,足球" id="saishi114327" data-time="2018-06-29 02:00">02:00 <b>世界杯小组赛G组 巴拿马 <img src="./zhibob_files/banama.png"> <span style="font-weight: bold;"> - </span> <img src="./zhibob_files/tunisi.png"> 突尼斯</b> <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0628114327.htm" target="_blank">等待更新</a> <a href="https://wenzi.zhibo8.cc/zhibo/zuqiu/2018/0628114327.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="世界杯,英格兰,比利时,篮球,NBA,足球" id="saishi114326" data-time="2018-06-29 02:00">02:00 <b>世界杯小组赛G组 英格兰 <img src="./zhibob_files/yinggelan.png"> <span style="font-weight: bold;"> - </span> <img src="./zhibob_files/bilishi.png"> 比利时</b> <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0628114326.htm" target="_blank">等待更新</a> <a href="https://wenzi.zhibo8.cc/zhibo/zuqiu/2018/0628114326.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="F1,其他" id="saishi125555" data-time="2018-06-29 17:00">17:00 F1奥地利大奖赛第一次练习赛 <a href="https://www.zhibo8.cc/zhibo/other/2018/0629125555.htm" target="_blank">QQ直播</a> <a href="https://wenzi.zhibo8.cc/zhibo/other/2018/0629125555.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://nbazc.wanjiashe.com/game.php?sid=3" target="_blank">NBA征程3服</a> <a href="http://mklq.wanjiashe.com/?zhibo" target="_blank">萌卡篮球新服</a> </li>
+<li label="F1,其他" id="saishi125556" data-time="2018-06-29 21:00">21:00 F1奥地利大奖赛第二次练习赛 <a href="https://www.zhibo8.cc/zhibo/other/2018/0629125556.htm" target="_blank">QQ直播</a> <a href="https://wenzi.zhibo8.cc/zhibo/other/2018/0629125556.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://nbazc.wanjiashe.com/game.php?sid=3" target="_blank">NBA征程3服</a> <a href="http://mklq.wanjiashe.com/?zhibo" target="_blank">萌卡篮球新服</a> </li>
+ </ul>
+        </div>
+      </div>
+ <div class="box">
+        <div class="titlebar">
+          <h2 title="2018-06-30">06月30日 星期六</h2>
+        </div>
+        <div class="content">
+          <ul>
+<li label="足球,中乙,盐城大丰,淄博星期天" id="saishi121909" data-time="2018-06-30 15:30">15:30 中乙第14轮 盐城大丰 <span style="font-weight: bold;"> - </span> 淄博星期天 <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0630121909.htm" target="_blank">等待更新</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="足球,中乙,长春百和嘉路喜,延边北国珲春" id="saishi121910" data-time="2018-06-30 15:30">15:30 中乙第14轮 长春百和嘉路喜 <span style="font-weight: bold;"> - </span> 延边北国珲春 <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0630121910.htm" target="_blank">等待更新</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="足球,中乙,上海申梵,四川九牛" id="saishi121915" data-time="2018-06-30 16:00">16:00 中乙第14轮 上海申梵 <span style="font-weight: bold;"> - </span> 四川九牛 <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0630121915.htm" target="_blank">等待更新</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="足球,中乙,内蒙古草上飞,保定容大" id="saishi121914" data-time="2018-06-30 16:00">16:00 中乙第14轮 内蒙古草上飞 <span style="font-weight: bold;"> - </span> 保定容大 <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0630121914.htm" target="_blank">等待更新</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="足球,中乙,北京理工,陕西大秦之水" id="saishi121912" data-time="2018-06-30 16:00">16:00 中乙第14轮 北京理工 <span style="font-weight: bold;"> - </span> 陕西大秦之水 <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0630121912.htm" target="_blank">等待更新</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="足球,中乙,合肥桂冠,深圳鹏城" id="saishi121916" data-time="2018-06-30 16:00">16:00 中乙第14轮 合肥桂冠 <span style="font-weight: bold;"> - </span> 深圳鹏城 <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0630121916.htm" target="_blank">等待更新</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="足球,中乙,沈阳东进,大连千兆" id="saishi121913" data-time="2018-06-30 16:00">16:00 中乙第14轮 沈阳东进 <span style="font-weight: bold;"> - </span> 大连千兆 <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0630121913.htm" target="_blank">等待更新</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="足球,中乙,河北精英,宁夏山屿海" id="saishi121911" data-time="2018-06-30 16:00">16:00 中乙第14轮 河北精英 <span style="font-weight: bold;"> - </span> 宁夏山屿海 <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0630121911.htm" target="_blank">等待更新</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="足球,中乙,湖南湘涛华莱,苏州东吴" id="saishi121917" data-time="2018-06-30 16:30">16:30 中乙第14轮 湖南湘涛华莱 <span style="font-weight: bold;"> - </span> 苏州东吴 <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0630121917.htm" target="_blank">等待更新</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="F1,其他" id="saishi125557" data-time="2018-06-30 18:00">18:00 F1奥地利大奖赛第三次练习赛 <a href="https://www.zhibo8.cc/zhibo/other/2018/0630125557.htm" target="_blank">QQ直播</a> <a href="https://wenzi.zhibo8.cc/zhibo/other/2018/0630125557.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://nbazc.wanjiashe.com/game.php?sid=3" target="_blank">NBA征程3服</a> <a href="http://mklq.wanjiashe.com/?zhibo" target="_blank">萌卡篮球新服</a> </li>
+<li label="足球,中乙,四川安纳普尔那,海南海口" id="saishi121919" data-time="2018-06-30 19:30">19:30 中乙第14轮 四川安纳普尔那 <span style="font-weight: bold;"> - </span> 海南海口 <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0630121919.htm" target="_blank">等待更新</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="足球,中乙,深圳雷曼,云南飞虎" id="saishi121918" data-time="2018-06-30 19:30">19:30 中乙第14轮 深圳雷曼 <span style="font-weight: bold;"> - </span> 云南飞虎 <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0630121918.htm" target="_blank">等待更新</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="足球,中乙,福建天信,南通支云" id="saishi121921" data-time="2018-06-30 19:30">19:30 中乙第14轮 福建天信 <span style="font-weight: bold;"> - </span> 南通支云 <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0630121921.htm" target="_blank">等待更新</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="足球,中乙,镇江文旅,江西联盛国贸" id="saishi121920" data-time="2018-06-30 19:30">19:30 中乙第14轮 镇江文旅 <span style="font-weight: bold;"> - </span> 江西联盛国贸 <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0630121920.htm" target="_blank">等待更新</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="F1,其他,F1奥地利站,排位赛" id="saishi119168" data-time="2018-06-30 21:00">21:00 F1奥地利站排位赛 F1奥地利站 <span style="font-weight: bold;"> - </span> 排位赛 <a href="https://www.zhibo8.cc/zhibo/other/2018/0630119168.htm" target="_blank">等待更新</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://nbazc.wanjiashe.com/game.php?sid=3" target="_blank">NBA征程3服</a> <a href="http://mklq.wanjiashe.com/?zhibo" target="_blank">萌卡篮球新服</a> </li>
+<li label="世界杯,篮球,NBA,足球,C1,D2" id="saishi114335" data-time="2018-06-30 22:00">22:00 <b>世界杯1/8决赛 C1 <img src="./zhibob_files/zuqiuzhudui.png"> <span style="font-weight: bold;"> - </span> <img src="./zhibob_files/zuqiukedui.png"> D2</b> <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0701114335.htm" target="_blank">等待更新</a> <a href="https://wenzi.zhibo8.cc/zhibo/zuqiu/2018/0701114335.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+ </ul>
+        </div>
+      </div>
+ <div class="box">
+        <div class="titlebar">
+          <h2 title="2018-07-01">07月01日 星期日</h2>
+        </div>
+        <div class="content">
+          <ul>
+<li label="世界杯,篮球,NBA,足球,A1,B2" id="saishi114334" data-time="2018-07-01 02:00">02:00 <b>世界杯1/8决赛 A1 <img src="./zhibob_files/zuqiuzhudui.png"> <span style="font-weight: bold;"> - </span> <img src="./zhibob_files/zuqiukedui.png"> B2</b> <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0630114334.htm" target="_blank">等待更新</a> <a href="https://wenzi.zhibo8.cc/zhibo/zuqiu/2018/0630114334.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="足球,中乙,青岛中能,沈阳城市建设" id="saishi121922" data-time="2018-07-01 15:30">15:30 中乙第14轮 青岛中能 <span style="font-weight: bold;"> - </span> 沈阳城市建设 <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0701121922.htm" target="_blank">等待更新</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="篮球,世预赛,新西兰,中国男篮" id="saishi118665" data-time="2018-07-01 19:30">19:30 <b>男篮世界杯预选赛 新西兰 <img src="./zhibob_files/xinxilan.png"> <span style="font-weight: bold;"> - </span> <img src="./zhibob_files/zhongguo.png"> 中国男篮</b> <a href="https://www.zhibo8.cc/zhibo/nba/2018/0701118665.htm" target="_blank">等待更新</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/lanqiubifen.htm" target="_blank">比分</a> <a href="http://nbazc.wanjiashe.com/game.php?sid=3" target="_blank">NBA征程3服</a> </li>
+<li label="F1,其他,F1奥地利站,正赛" id="saishi119167" data-time="2018-07-01 21:10">21:10 <b>F1奥地利站正赛 F1奥地利站 <img src="./zhibob_files/F1.png"> <span style="font-weight: bold;"> - </span> <img src="./zhibob_files/zhengsai.png"> 正赛</b> <a href="https://www.zhibo8.cc/zhibo/other/2018/0701119167.htm" target="_blank">QQ直播</a> <a href="https://wenzi.zhibo8.cc/zhibo/other/2018/0701119167.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://nbazc.wanjiashe.com/game.php?sid=3" target="_blank">NBA征程3服</a> <a href="http://mklq.wanjiashe.com/?zhibo" target="_blank">萌卡篮球新服</a> </li>
+<li label="世界杯,篮球,NBA,足球,B1,A2" id="saishi114336" data-time="2018-07-01 22:00">22:00 <b>世界杯1/8决赛 B1 <img src="./zhibob_files/zuqiuzhudui.png"> <span style="font-weight: bold;"> - </span> <img src="./zhibob_files/zuqiukedui.png"> A2</b> <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0701114336.htm" target="_blank">等待更新</a> <a href="https://wenzi.zhibo8.cc/zhibo/zuqiu/2018/0701114336.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+ </ul>
+        </div>
+      </div>
+ <div class="box">
+        <div class="titlebar">
+          <h2 title="2018-07-02">07月02日 星期一</h2>
+        </div>
+        <div class="content">
+          <ul>
+<li label="世界杯,篮球,NBA,足球,D1,C2" id="saishi114337" data-time="2018-07-02 02:00">02:00 <b>世界杯1/8决赛 D1 <img src="./zhibob_files/zuqiuzhudui.png"> <span style="font-weight: bold;"> - </span> <img src="./zhibob_files/zuqiukedui.png"> C2</b> <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0702114337.htm" target="_blank">等待更新</a> <a href="https://wenzi.zhibo8.cc/zhibo/zuqiu/2018/0702114337.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="世界杯,篮球,NBA,足球,E1,F2" id="saishi114338" data-time="2018-07-02 22:00">22:00 <b>世界杯1/8决赛 E1 <img src="./zhibob_files/zuqiuzhudui.png"> <span style="font-weight: bold;"> - </span> <img src="./zhibob_files/zuqiukedui.png"> F2</b> <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0702114338.htm" target="_blank">等待更新</a> <a href="https://wenzi.zhibo8.cc/zhibo/zuqiu/2018/0702114338.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+ </ul>
+        </div>
+      </div>
+ <div class="box">
+        <div class="titlebar">
+          <h2 title="2018-07-03">07月03日 星期二</h2>
+        </div>
+        <div class="content">
+          <ul>
+<li label="世界杯,篮球,NBA,足球,G1,H2" id="saishi114339" data-time="2018-07-03 02:00">02:00 <b>世界杯1/8决赛 G1 <img src="./zhibob_files/zuqiuzhudui.png"> <span style="font-weight: bold;"> - </span> <img src="./zhibob_files/zuqiukedui.png"> H2</b> <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0703114339.htm" target="_blank">等待更新</a> <a href="https://wenzi.zhibo8.cc/zhibo/zuqiu/2018/0703114339.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="世界杯,篮球,NBA,足球,F1,E2" id="saishi114340" data-time="2018-07-03 22:00">22:00 <b>世界杯1/8决赛 F1 <img src="./zhibob_files/F1.png"> <span style="font-weight: bold;"> - </span> <img src="./zhibob_files/zuqiukedui.png"> E2</b> <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0703114340.htm" target="_blank">等待更新</a> <a href="https://wenzi.zhibo8.cc/zhibo/zuqiu/2018/0703114340.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+ </ul>
+        </div>
+      </div>
+ <div class="box">
+        <div class="titlebar">
+          <h2 title="2018-07-04">07月04日 星期三</h2>
+        </div>
+        <div class="content">
+          <ul>
+<li label="世界杯,篮球,NBA,足球,H1,G2" id="saishi114341" data-time="2018-07-04 02:00">02:00 <b>世界杯1/8决赛 H1 <img src="./zhibob_files/zuqiuzhudui.png"> <span style="font-weight: bold;"> - </span> <img src="./zhibob_files/zuqiukedui.png"> G2</b> <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0704114341.htm" target="_blank">等待更新</a> <a href="https://wenzi.zhibo8.cc/zhibo/zuqiu/2018/0704114341.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+ </ul>
+        </div>
+      </div>
+ <div class="box">
+        <div class="titlebar">
+          <h2 title="2018-07-05">07月05日 星期四</h2>
+        </div>
+        <div class="content">
+          <ul>
+<li label="其他" id="saishi124286" data-time="2018-07-05 00:00">00:00 今日暂无赛事 <a href="https://www.zhibo8.cc/zhibo/other/2018/0705124286.htm" target="_blank">等待更新</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://nbazc.wanjiashe.com/game.php?sid=3" target="_blank">NBA征程3服</a> <a href="http://mklq.wanjiashe.com/?zhibo" target="_blank">萌卡篮球新服</a> </li>
+ </ul>
+        </div>
+      </div>
+ <div class="box">
+        <div class="titlebar">
+          <h2 title="2018-07-06">07月06日 星期五</h2>
+        </div>
+        <div class="content">
+          <ul>
+<li label="世界杯,篮球,NBA,足球,49胜者,50胜者" id="saishi114342" data-time="2018-07-06 22:00">22:00 <b>世界杯1/4决赛 49胜者 <img src="./zhibob_files/zuqiuzhudui.png"> <span style="font-weight: bold;"> - </span> <img src="./zhibob_files/zuqiukedui.png"> 50胜者</b> <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0706114342.htm" target="_blank">等待更新</a> <a href="https://wenzi.zhibo8.cc/zhibo/zuqiu/2018/0706114342.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+ </ul>
+        </div>
+      </div>
+ <div class="box">
+        <div class="titlebar">
+          <h2 title="2018-07-07">07月07日 星期六</h2>
+        </div>
+        <div class="content">
+          <ul>
+<li label="世界杯,篮球,NBA,足球,53胜者,54胜者" id="saishi114343" data-time="2018-07-07 02:00">02:00 <b>世界杯1/4决赛 53胜者 <img src="./zhibob_files/zuqiuzhudui.png"> <span style="font-weight: bold;"> - </span> <img src="./zhibob_files/zuqiukedui.png"> 54胜者</b> <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0707114343.htm" target="_blank">等待更新</a> <a href="https://wenzi.zhibo8.cc/zhibo/zuqiu/2018/0707114343.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="NBA,凯尔特人,76人,篮球" id="saishi125619" data-time="2018-07-07 07:30">07:30 <b>NBA夏季联赛</b> 凯尔特人 <img src="./zhibob_files/kaierteren.png"> <span style="font-weight: bold;"> - </span> <img src="./zhibob_files/76ren.png"> 76人 <a href="https://www.zhibo8.cc/zhibo/nba/2018/0707125619.htm" target="_blank">等待更新</a> <a href="https://wenzi.zhibo8.cc/zhibo/nba/2018/0707125619.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/lanqiubifen.htm" target="_blank">比分</a> <a href="http://nbazc.wanjiashe.com/game.php?sid=3" target="_blank">NBA征程3服</a> </li>
+<li label="足球,中乙,长春百和嘉路喜,北京理工" id="saishi121838" data-time="2018-07-07 15:00">15:00 中乙第8轮 长春百和嘉路喜 <span style="font-weight: bold;"> - </span> 北京理工 <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0707121838.htm" target="_blank">等待更新</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="足球,中乙,青岛中能,陕西大秦之水" id="saishi121880" data-time="2018-07-07 15:30">15:30 中乙第11轮 青岛中能 <span style="font-weight: bold;"> - </span> 陕西大秦之水 <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0707121880.htm" target="_blank">等待更新</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="中超,大连一方,中乙,四川九牛,足球" id="saishi124368" data-time="2018-07-07 19:35">19:35 <b>足协杯1/4决赛首回合 大连一方 <img src="./zhibob_files/dalianyifang.png"> <span style="font-weight: bold;"> - </span> <img src="./zhibob_files/sichuanjiuniu.png"> 四川九牛</b>   <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0707124368.htm" target="_blank">等待更新</a>   <a href="https://wenzi.zhibo8.cc/zhibo/zuqiu/2018/0707124368.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="F1,其他,F1英国站,排位赛" id="saishi119170" data-time="2018-07-07 21:00">21:00 F1英国站排位赛 F1英国站 <span style="font-weight: bold;"> - </span> 排位赛 <a href="https://www.zhibo8.cc/zhibo/other/2018/0707119170.htm" target="_blank">等待更新</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://nbazc.wanjiashe.com/game.php?sid=3" target="_blank">NBA征程3服</a> <a href="http://mklq.wanjiashe.com/?zhibo" target="_blank">萌卡篮球新服</a> </li>
+<li label="世界杯,篮球,NBA,足球,51胜者,52胜者" id="saishi114344" data-time="2018-07-07 22:00">22:00 <b>世界杯1/4决赛 51胜者 <img src="./zhibob_files/zuqiuzhudui.png"> <span style="font-weight: bold;"> - </span> <img src="./zhibob_files/zuqiukedui.png"> 52胜者</b> <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0707114344.htm" target="_blank">等待更新</a> <a href="https://wenzi.zhibo8.cc/zhibo/zuqiu/2018/0707114344.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+ </ul>
+        </div>
+      </div>
+ <div class="box">
+        <div class="titlebar">
+          <h2 title="2018-07-08">07月08日 星期日</h2>
+        </div>
+        <div class="content">
+          <ul>
+<li label="世界杯,篮球,NBA,足球,55胜者,56胜者" id="saishi114345" data-time="2018-07-08 02:00">02:00 <b>世界杯1/4决赛 55胜者 <img src="./zhibob_files/zuqiuzhudui.png"> <span style="font-weight: bold;"> - </span> <img src="./zhibob_files/zuqiukedui.png"> 56胜者</b> <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0708114345.htm" target="_blank">等待更新</a> <a href="https://wenzi.zhibo8.cc/zhibo/zuqiu/2018/0708114345.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="NBA,湖人,76人,篮球" id="saishi125601" data-time="2018-07-08 08:30">08:30 <b>NBA夏季联赛</b> 湖人 <img src="./zhibob_files/huren.png"> <span style="font-weight: bold;"> - </span> <img src="./zhibob_files/76ren.png"> 76人   <a href="https://www.zhibo8.cc/zhibo/nba/2018/0708125601.htm" target="_blank">等待更新</a>   <a href="https://wenzi.zhibo8.cc/zhibo/nba/2018/0708125601.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/lanqiubifen.htm" target="_blank">比分</a> <a href="http://nbazc.wanjiashe.com/game.php?sid=3" target="_blank">NBA征程3服</a> </li>
+<li label="篮球,NBA,凯尔特人,掘金" id="saishi125620" data-time="2018-07-08 11:00">11:00 <b>NBA夏季联赛</b> 凯尔特人 <img src="./zhibob_files/kaierteren.png"> <span style="font-weight: bold;"> - </span> <img src="./zhibob_files/juejin.png"> 掘金 <a href="https://www.zhibo8.cc/zhibo/nba/2018/0708125620.htm" target="_blank">等待更新</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/lanqiubifen.htm" target="_blank">比分</a> <a href="http://nbazc.wanjiashe.com/game.php?sid=3" target="_blank">NBA征程3服</a> </li>
+<li label="中超,江苏苏宁,广州富力,足球" id="saishi124370" data-time="2018-07-08 19:00">19:00 <b>足协杯1/4决赛首回合 江苏苏宁 <img src="./zhibob_files/jiangsusuning.png"> <span style="font-weight: bold;"> - </span> <img src="./zhibob_files/guangzhoufuli.png"> 广州富力</b>   <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0708124370.htm" target="_blank">等待更新</a>   <a href="https://wenzi.zhibo8.cc/zhibo/zuqiu/2018/0708124370.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="中超,山东鲁能,贵州恒丰,足球" id="saishi124369" data-time="2018-07-08 19:35">19:35 <b>足协杯1/4决赛首回合 贵州恒丰 <img src="./zhibob_files/guizhouhengfeng.png"> <span style="font-weight: bold;"> - </span> <img src="./zhibob_files/shandongluneng.png"> 山东鲁能</b>   <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0708124369.htm" target="_blank">等待更新</a>   <a href="https://wenzi.zhibo8.cc/zhibo/zuqiu/2018/0708124369.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="F1,其他,F1英国站,正赛" id="saishi119169" data-time="2018-07-08 21:10">21:10 <b>F1英国站正赛 F1英国站 <img src="./zhibob_files/F1.png"> <span style="font-weight: bold;"> - </span> <img src="./zhibob_files/zhengsai.png"> 正赛</b> <a href="https://www.zhibo8.cc/zhibo/other/2018/0708119169.htm" target="_blank">等待更新</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://nbazc.wanjiashe.com/game.php?sid=3" target="_blank">NBA征程3服</a> <a href="http://mklq.wanjiashe.com/?zhibo" target="_blank">萌卡篮球新服</a> </li>
+ </ul>
+        </div>
+      </div>
+ <div class="box">
+        <div class="titlebar">
+          <h2 title="2018-07-09">07月09日 星期一</h2>
+        </div>
+        <div class="content">
+          <ul>
+<li label="篮球,NBA,湖人,公牛" id="saishi125602" data-time="2018-07-09 08:30">08:30 <b>NBA夏季联赛</b> 湖人 <img src="./zhibob_files/huren.png"> <span style="font-weight: bold;"> - </span> <img src="./zhibob_files/gongniu.png"> 公牛   <a href="https://www.zhibo8.cc/zhibo/nba/2018/0709125602.htm" target="_blank">等待更新</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/lanqiubifen.htm" target="_blank">比分</a> <a href="http://nbazc.wanjiashe.com/game.php?sid=3" target="_blank">NBA征程3服</a> </li>
+ </ul>
+        </div>
+      </div>
+ <div class="box">
+        <div class="titlebar">
+          <h2 title="2018-07-10">07月10日 星期二</h2>
+        </div>
+        <div class="content">
+          <ul>
+<li label="篮球,NBA,凯尔特人,黄蜂" id="saishi125621" data-time="2018-07-10 07:00">07:00 <b>NBA夏季联赛</b> 凯尔特人 <img src="./zhibob_files/kaierteren.png"> <span style="font-weight: bold;"> - </span> <img src="./zhibob_files/huangfeng.png"> 黄蜂 <a href="https://www.zhibo8.cc/zhibo/nba/2018/0710125621.htm" target="_blank">等待更新</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/lanqiubifen.htm" target="_blank">比分</a> <a href="http://nbazc.wanjiashe.com/game.php?sid=3" target="_blank">NBA征程3服</a> </li>
+ </ul>
+        </div>
+      </div>
+ <div class="box">
+        <div class="titlebar">
+          <h2 title="2018-07-11">07月11日 星期三</h2>
+        </div>
+        <div class="content">
+          <ul>
+<li label="足球,河北华夏,沙尔克" id="saishi125185" data-time="2018-07-11 23:59">时间待定 <b>足球友谊赛 河北华夏 <img src="./zhibob_files/hebeihuaxia.png"> <span style="font-weight: bold;"> - </span> <img src="./zhibob_files/shaerke.png"> 沙尔克</b> <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0711125185.htm" target="_blank">等待更新</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="世界杯,篮球,NBA,足球,57胜者,58胜者" id="saishi114346" data-time="2018-07-11 02:00">02:00 <b>世界杯半决赛 57胜者 <img src="./zhibob_files/zuqiuzhudui.png"> <span style="font-weight: bold;"> - </span> <img src="./zhibob_files/zuqiukedui.png"> 58胜者</b> <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0711114346.htm" target="_blank">等待更新</a> <a href="https://wenzi.zhibo8.cc/zhibo/zuqiu/2018/0711114346.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="篮球,NBA,湖人,尼克斯" id="saishi125603" data-time="2018-07-11 05:30">05:30 <b>NBA夏季联赛</b> 湖人 <img src="./zhibob_files/huren.png"> <span style="font-weight: bold;"> - </span> <img src="./zhibob_files/nikesi.png"> 尼克斯   <a href="https://www.zhibo8.cc/zhibo/nba/2018/0711125603.htm" target="_blank">等待更新</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/lanqiubifen.htm" target="_blank">比分</a> <a href="http://nbazc.wanjiashe.com/game.php?sid=3" target="_blank">NBA征程3服</a> </li>
+<li label="中甲,大连超越,辽宁宏运,足球" id="saishi119545" data-time="2018-07-11 19:30">19:30 <b>中甲第12轮</b> 辽宁宏运 <img src="./zhibob_files/liaoninghongyun.png"> <span style="font-weight: bold;"> - </span> <img src="./zhibob_files/dalianchaoyue.png"> 大连超越 <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0516119545.htm" target="_blank">等待更新</a> <a href="http://wenzi.zhibo8.cc/zhibo/zuqiu/2018/0516119545.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+ </ul>
+        </div>
+      </div>
+ <div class="box">
+        <div class="titlebar">
+          <h2 title="2018-07-12">07月12日 星期四</h2>
+        </div>
+        <div class="content">
+          <ul>
+<li label="世界杯,篮球,NBA,足球,59胜者,60胜者" id="saishi114347" data-time="2018-07-12 02:00">02:00 <b>世界杯半决赛 59胜者 <img src="./zhibob_files/zuqiuzhudui.png"> <span style="font-weight: bold;"> - </span> <img src="./zhibob_files/zuqiukedui.png"> 60胜者</b> <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0712114347.htm" target="_blank">等待更新</a> <a href="https://wenzi.zhibo8.cc/zhibo/zuqiu/2018/0712114347.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+ </ul>
+        </div>
+      </div>
+ <div class="box">
+        <div class="titlebar">
+          <h2 title="2018-07-13">07月13日 星期五</h2>
+        </div>
+        <div class="content">
+          <ul>
+<li label="其他" id="saishi124289" data-time="2018-07-13 00:00">00:00 今日暂无赛事 <a href="https://www.zhibo8.cc/zhibo/other/2018/0713124289.htm" target="_blank">等待更新</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://nbazc.wanjiashe.com/game.php?sid=3" target="_blank">NBA征程3服</a> <a href="http://mklq.wanjiashe.com/?zhibo" target="_blank">萌卡篮球新服</a> </li>
+ </ul>
+        </div>
+      </div>
+ <div class="box">
+        <div class="titlebar">
+          <h2 title="2018-07-14">07月14日 星期六</h2>
+        </div>
+        <div class="content">
+          <ul>
+<li label="足球,中乙,延边北国珲春,内蒙古草上飞" id="saishi121924" data-time="2018-07-14 15:30">15:30 中乙第15轮 延边北国珲春 <span style="font-weight: bold;"> - </span> 内蒙古草上飞 <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0714121924.htm" target="_blank">等待更新</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="足球,中乙,长春百和嘉路喜,盐城大丰" id="saishi121923" data-time="2018-07-14 15:30">15:30 中乙第15轮 长春百和嘉路喜 <span style="font-weight: bold;"> - </span> 盐城大丰 <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0714121923.htm" target="_blank">等待更新</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="足球,中乙,云南飞虎,四川安纳普尔那" id="saishi121928" data-time="2018-07-14 16:00">16:00 中乙第15轮 云南飞虎 <span style="font-weight: bold;"> - </span> 四川安纳普尔那 <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0714121928.htm" target="_blank">等待更新</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="足球,中乙,四川九牛,深圳鹏城" id="saishi121929" data-time="2018-07-14 16:00">16:00 中乙第15轮 四川九牛 <span style="font-weight: bold;"> - </span> 深圳鹏城 <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0714121929.htm" target="_blank">等待更新</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="足球,中乙,宁夏山屿海,北京理工" id="saishi121927" data-time="2018-07-14 16:00">16:00 中乙第15轮 宁夏山屿海 <span style="font-weight: bold;"> - </span> 北京理工 <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0714121927.htm" target="_blank">等待更新</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="足球,中乙,沈阳城市建设,大连千兆" id="saishi121926" data-time="2018-07-14 16:00">16:00 中乙第15轮 沈阳城市建设 <span style="font-weight: bold;"> - </span> 大连千兆 <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0714121926.htm" target="_blank">等待更新</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="足球,中乙,河北精英,青岛中能" id="saishi121925" data-time="2018-07-14 16:00">16:00 中乙第15轮 河北精英 <span style="font-weight: bold;"> - </span> 青岛中能 <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0714121925.htm" target="_blank">等待更新</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="足球,中乙,海南海口,湖南湘涛华莱" id="saishi121930" data-time="2018-07-14 16:30">16:30 中乙第15轮 海南海口 <span style="font-weight: bold;"> - </span> 湖南湘涛华莱 <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0714121930.htm" target="_blank">等待更新</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="足球,中乙,保定容大,沈阳东进" id="saishi121931" data-time="2018-07-14 19:30">19:30 中乙第15轮 保定容大 <span style="font-weight: bold;"> - </span> 沈阳东进 <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0714121931.htm" target="_blank">等待更新</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="足球,中乙,江西联盛国贸,上海申梵" id="saishi121932" data-time="2018-07-14 19:30">19:30 中乙第15轮 江西联盛国贸 <span style="font-weight: bold;"> - </span> 上海申梵 <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0714121932.htm" target="_blank">等待更新</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="足球,中乙,苏州东吴,福建天信" id="saishi121933" data-time="2018-07-14 19:30">19:30 中乙第15轮 苏州东吴 <span style="font-weight: bold;"> - </span> 福建天信 <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0714121933.htm" target="_blank">等待更新</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="足球,中乙,南通支云,镇江文旅" id="saishi121934" data-time="2018-07-14 19:35">19:35 中乙第15轮 南通支云 <span style="font-weight: bold;"> - </span> 镇江文旅 <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0714121934.htm" target="_blank">等待更新</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="足球,中乙,淄博星期天,陕西大秦之水" id="saishi121935" data-time="2018-07-14 19:35">19:35 中乙第15轮 淄博星期天 <span style="font-weight: bold;"> - </span> 陕西大秦之水 <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0714121935.htm" target="_blank">等待更新</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="中甲,黑龙江火山鸣泉,足球,新疆雪豹" id="saishi119558" data-time="2018-07-14 20:00">20:00 <b>中甲第14轮</b> 新疆雪豹 <img src="./zhibob_files/xinjiangxuebao.png"> <span style="font-weight: bold;"> - </span> <img src="./zhibob_files/heilongjianghuoshanmingquan.png"> 黑龙江火山鸣泉 <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0718119558.htm" target="_blank">等待更新</a> <a href="https://wenzi.zhibo8.cc/zhibo/zuqiu/2018/0718119558.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="世界杯,篮球,NBA,足球,61负者,62负者" id="saishi114348" data-time="2018-07-14 22:00">22:00 <b>世界杯季军争夺战 61负者 <img src="./zhibob_files/zuqiuzhudui.png"> <span style="font-weight: bold;"> - </span> <img src="./zhibob_files/zuqiukedui.png"> 62负者</b> <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0714114348.htm" target="_blank">等待更新</a> <a href="https://wenzi.zhibo8.cc/zhibo/zuqiu/2018/0714114348.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+ </ul>
+        </div>
+      </div>
+ <div class="box">
+        <div class="titlebar">
+          <h2 title="2018-07-15">07月15日 星期日</h2>
+        </div>
+        <div class="content">
+          <ul>
+<li label="足球,中乙,深圳雷曼,合肥桂冠" id="saishi121936" data-time="2018-07-15 19:30">19:30 中乙第15轮 深圳雷曼 <span style="font-weight: bold;"> - </span> 合肥桂冠 <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0715121936.htm" target="_blank">等待更新</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+<li label="世界杯,篮球,NBA,足球,61胜者,62胜者" id="saishi114349" data-time="2018-07-15 23:00">23:00 <b>世界杯决赛 61胜者 <img src="./zhibob_files/zuqiuzhudui.png"> <span style="font-weight: bold;"> - </span> <img src="./zhibob_files/zuqiukedui.png"> 62胜者</b> <a href="https://www.zhibo8.cc/zhibo/zuqiu/2018/0715114349.htm" target="_blank">等待更新</a> <a href="https://wenzi.zhibo8.cc/zhibo/zuqiu/2018/0715114349.htm" target="_blank">文字</a> <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">手机看直播</a>  <a href="http://www.188bifen.com/" target="_blank">比分</a> <a href="http://zqds.wanjiashe.com/game.php?sid=9" target="_blank">足球大师9服</a> </li>
+ </ul>
+        </div>
+      </div>
+
+
+    </div>
+    <div class="bbs_container right">
+        <div class="box">
+            <div class="titlebar">
+                <h2><a href="https://bbs.zhibo8.cc/forum/list/?fid=8" target="_blank">天下足球</a></h2>
+                <a class="more" href="https://bbs.zhibo8.cc/forum/list/?fid=8" target="_blank"> 更多</a> </div>
+            <div class="content">
+                <ul>
+					<li id="-"><a href="http://news.zhibo8.cc/zuqiu/2018-06-17/5b26643b26e4c.htm" target="_blank" title="内马尔INS：有梦不惧前行">内马尔INS：有梦不惧前行</a></li><li id="-"><a href="http://news.zhibo8.cc/zuqiu/2018-06-17/5b2662ec63cfb.htm" target="_blank" title="本届任意球破门数追平巴西世界杯">本届任意球破门数追平巴西世界杯</a></li><li id="-"><a href="http://news.zhibo8.cc/zuqiu/2018-06-17/5b266272b1d69.htm" target="_blank" title="马图伊迪：囧叔对尤文是忠诚的">马图伊迪：囧叔对尤文是忠诚的</a></li><li id="-"><a href="https://bbs.zhibo8.cc/forum/topic?tid=2364135" target="_blank" title="【论坛】今年世界杯这三个任意球，哪个更精彩">【论坛】今年世界杯这三个任意球，哪个更精彩</a></li><li id="-"><a href="http://news.zhibo8.cc/zuqiu/2018-06-17/5b265ec462c25.htm" target="_blank" title="经纪人确认萨拉赫已经完全恢复">经纪人确认萨拉赫已经完全恢复</a></li><li id="-"><a href="http://news.zhibo8.cc/zuqiu/2018-06-17/5b265ea9435d3.htm" target="_blank" title="金左脚！科拉罗夫任意球破门">金左脚！科拉罗夫任意球破门</a></li><li id="-"><a href="http://news.zhibo8.cc/zuqiu/2018-06-17/5b265e79b08e1.htm" target="_blank" title="车范根谈韩国：出线就是成功">车范根谈韩国：出线就是成功</a></li><li id="-"><a href="http://news.zhibo8.cc/zuqiu/2018-06-17/5b265dfac81c9.htm" target="_blank" title="世体：格子一个月前就已决定留队">世体：格子一个月前就已决定留队</a></li><li id="-"><a href="http://news.zhibo8.cc/zuqiu/2018-06-17/5b265d598a8e6.htm" target="_blank" title="“纳”是爹！纳瓦斯扑单刀">“纳”是爹！纳瓦斯扑单刀</a></li><li id="-"><a href="http://news.zhibo8.cc/zuqiu/2018-06-17/5b265c7803013.htm" target="_blank" title="意媒：萨里接近出任切尔西主帅">意媒：萨里接近出任切尔西主帅</a></li><li id="-"><a href="http://news.zhibo8.cc/zuqiu/2018-06-17/5b265c52d9e04.htm" target="_blank" title="罗体：那不勒斯已报价阿雷奥拉">罗体：那不勒斯已报价阿雷奥拉</a></li><li id="-"><a href="https://bbs.zhibo8.cc/forum/topic?tid=2363674" target="_blank" title="【论坛】深度解析梅罗近些年的差距">【论坛】深度解析梅罗近些年的差距</a></li><li id="-"><a href="http://news.zhibo8.cc/zuqiu/2018-06-17/5b2654b6426b4.htm" target="_blank" title="半场-哥斯达黎加暂0-0塞尔维亚">半场-哥斯达黎加暂0-0塞尔维亚</a></li><li id="-"><a href="http://news.zhibo8.cc/zuqiu/2018-06-17/5b26582cc2cde.htm" target="_blank" title="越位在先？米林科维奇倒钩被扑">越位在先？米林科维奇倒钩被扑</a></li><li id="-"><a href="http://news.zhibo8.cc/zuqiu/2018-06-17/5b2657b72dcf5.htm" target="_blank" title="澳门将：不支持将科技应用到比赛">澳门将：不支持将科技应用到比赛</a></li><li id="-"><a href="http://news.zhibo8.cc/zuqiu/2018-06-17/5b26552cedf42.htm" target="_blank" title="博格巴制胜球更正为澳洲乌龙">博格巴制胜球更正为澳洲乌龙</a></li><li id="-"><a href="http://news.zhibo8.cc/zuqiu/2018-06-17/5b2651a5bbe93.htm" target="_blank" title="德国后卫赫克托因感冒缺战墨西哥">德国后卫赫克托因感冒缺战墨西哥</a></li><li id="-"><a href="http://news.zhibo8.cc/zuqiu/2018-06-17/5b264f4c911d9.htm" target="_blank" title="马卡：洛佩特吉拒绝主动辞职">马卡：洛佩特吉拒绝主动辞职</a></li><li id="-"><a href="https://bbs.zhibo8.cc/forum/topic?tid=2363781" target="_blank" title="【论坛】C罗像詹姆斯，那梅西又像谁">【论坛】C罗像詹姆斯，那梅西又像谁</a></li><li id="-"><a href="http://news.zhibo8.cc/zuqiu/2018-06-17/5b264df681ced.htm" target="_blank" title="意甲头版：C罗3-0梅西">意甲头版：C罗3-0梅西</a></li><li id="-"><a href="http://news.zhibo8.cc/zuqiu/2018-06-17/5b264cd10db72.htm" target="_blank" title="伊万出场次数塞尔维亚第一">伊万出场次数塞尔维亚第一</a></li><li id="-"><a href="http://news.zhibo8.cc/zuqiu/2018-06-17/5b264c7e0dd1e.htm" target="_blank" title="意媒：米兰考虑多纳鲁马换莫拉塔">意媒：米兰考虑多纳鲁马换莫拉塔</a></li><li id="-"><a href="http://news.zhibo8.cc/zuqiu/2018-06-17/5b264a686e3f0.htm" target="_blank" title="法媒：默滕斯拒绝恒大申花报价">法媒：默滕斯拒绝恒大申花报价</a></li><li id="-"><a href="http://news.zhibo8.cc/zuqiu/2018-06-17/5b264977b3d2d.htm" target="_blank" title="格策、施廷德尔发推祝福德国">格策、施廷德尔发推祝福德国</a></li><li id="-"><a href="http://news.zhibo8.cc/zuqiu/2018-06-17/5b26463c67d87.htm" target="_blank" title="米体：马里奥或加入登贝莱交易中">米体：马里奥或加入登贝莱交易中</a></li><li id="-"><a href="https://bbs.zhibo8.cc/forum/topic?tid=2363705" target="_blank" title="【论坛】致最喜爱的内马尔">【论坛】致最喜爱的内马尔</a></li><li id="-"><a href="http://news.zhibo8.cc/zuqiu/2018-06-17/5b2644d01075b.htm" target="_blank" title="博格巴：我是世界上最受批评的人">博格巴：我是世界上最受批评的人</a></li><li id="-"><a href="http://news.zhibo8.cc/zuqiu/2018-06-17/5b25bd9a89ead.htm" target="_blank" title="盘王竞猜牛人榜：连红无处不在">盘王竞猜牛人榜：连红无处不在</a></li><li id="-"><a href="http://news.zhibo8.cc/zuqiu/2018-06-17/5b26416bc011f.htm" target="_blank" title="马切纳：德赫亚拥有全世界的信任">马切纳：德赫亚拥有全世界的信任</a></li><li id="-"><a href="http://news.zhibo8.cc/zuqiu/2018-06-17/5b26414bb2ab6.htm" target="_blank" title="皇马外租小将推特宣布续约">皇马外租小将推特宣布续约</a></li>                </ul>
+            </div>
+        </div>
+        <div class="box">
+            <div class="titlebar">
+                <h2><a href="https://bbs.zhibo8.cc/forum/list/?fid=62" target="_blank">篮球公园</a></h2>
+                <a class="more" href="https://bbs.zhibo8.cc/forum/list/?fid=62" target="_blank"> 更多</a> </div>
+            <div class="content">
+                <ul>
+					<li id="-"><a href="http://news.zhibo8.cc/nba/2018-06-17/5b26645a08dbe.htm" target="_blank" title="历史上的今天：凯尔特人获第17冠">历史上的今天：凯尔特人获第17冠</a></li><li id="-"><a href="http://news.zhibo8.cc/nba/2018-06-17/5b26597f1d9b3.htm" target="_blank" title="麦迪&amp;卡特：科怀很难拒绝顶薪">麦迪&amp;卡特：科怀很难拒绝顶薪</a></li><li id="-"><a href="https://bbs.zhibo8.cc/forum/topic?tid=2360964" target="_blank" title="【论坛】詹姆斯只专注得分的话，球迷会不会更多">【论坛】詹姆斯只专注得分的话，球迷会不会更多</a></li><li id="-"><a href="http://news.zhibo8.cc/nba/2018-06-17/5b26505883255.htm" target="_blank" title="库里在家锻炼 遭太太调侃">库里在家锻炼 遭太太调侃</a></li><li id="-"><a href="http://news.zhibo8.cc/nba/2018-06-17/5b264d7b2f475.htm" target="_blank" title="扎扎出席活动偶遇“神奇面包机”">扎扎出席活动偶遇“神奇面包机”</a></li><li id="-"><a href="http://news.zhibo8.cc/nba/2018-06-17/5b264b9800caf.htm" target="_blank" title="拉里-布朗与意大利球队正式签约">拉里-布朗与意大利球队正式签约</a></li><li id="-"><a href="http://news.zhibo8.cc/nba/2018-06-17/5b2645a75751a.htm" target="_blank" title="欧文：我为海沃德的受伤承担责任">欧文：我为海沃德的受伤承担责任</a></li><li id="-"><a href="https://bbs.zhibo8.cc/forum/list/?fid=62" target="_blank" title="【论坛】波波可能20年退休，他与禅师谁的历史地位更高">【论坛】波波可能20年退休，他与禅师谁的历史地位更高</a></li><li id="-"><a href="http://news.zhibo8.cc/nba/2018-06-17/5b263a31a3c29.htm" target="_blank" title="晚报：太阳有意获得小卡">晚报：太阳有意获得小卡</a></li><li id="-"><a href="http://news.zhibo8.cc/nba/2018-06-17/5b262b9d1219d.htm" target="_blank" title="趣图：湖人球迷的幻想&amp;现实">趣图：湖人球迷的幻想&amp;现实</a></li><li id="-"><a href="http://news.zhibo8.cc/nba/2018-06-17/5b262af11d3ba.htm" target="_blank" title="盘点：凯尔特人赛季五大重要成就">盘点：凯尔特人赛季五大重要成就</a></li><li id="-"><a href="https://bbs.zhibo8.cc/forum/topic?tid=2360380" target="_blank" title="【论坛】科比当年拿81分时，你是什么反应">【论坛】科比当年拿81分时，你是什么反应</a></li><li id="-"><a href="http://news.zhibo8.cc/nba/2018-06-17/5b2625ed23100.htm" target="_blank" title="众CBA球星微博祝父亲节快乐">众CBA球星微博祝父亲节快乐</a></li><li id="-"><a href="http://news.zhibo8.cc/nba/2018-06-17/5b262345b1e8d.htm" target="_blank" title="迪文岑佐：关心赢球和球队影响力">迪文岑佐：关心赢球和球队影响力</a></li><li id="-"><a href="http://news.zhibo8.cc/nba/2018-06-17/5b262178f1cf6.htm" target="_blank" title="公牛副总裁：和邓恩之间没问题">公牛副总裁：和邓恩之间没问题</a></li><li id="-"><a href="http://news.zhibo8.cc/nba/2018-06-17/5b261bd027bb3.htm" target="_blank" title="凯西教练：是时候参与竞争了">凯西教练：是时候参与竞争了</a></li><li id="-"><a href="https://bbs.zhibo8.cc/forum/topic?tid=2360958" target="_blank" title="【论坛】如果詹姆斯来火箭，三巨头的球权如何分配">【论坛】如果詹姆斯来火箭，三巨头的球权如何分配</a></li><li id="-"><a href="http://news.zhibo8.cc/nba/2018-06-17/5b2613ec36596.htm" target="_blank" title="巴爷：TT假强硬 LBJ会去湖人">巴爷：TT假强硬 LBJ会去湖人</a></li><li id="-"><a href="https://bbs.zhibo8.cc/forum/topic?tid=2363571" target="_blank" title="【猜篮球球星送话费】二百三十六期 猜猜下面两位球星是谁">【猜篮球球星送话费】二百三十六期 猜猜下面两位球星是谁</a></li><li id="-"><a href="http://news.zhibo8.cc/nba/2018-06-17/5b260687ce390.htm" target="_blank" title="【新秀巡礼】阿隆-霍乐迪">【新秀巡礼】阿隆-霍乐迪</a></li><li id="-"><a href="http://news.zhibo8.cc/nba/2018-06-17/5b26049dec971.htm" target="_blank" title="国王老板与东契奇在马德里会面">国王老板与东契奇在马德里会面</a></li><li id="-"><a href="https://bbs.zhibo8.cc/forum/list/?fid=31" target="_blank" title="【午稽之谈】你第一次见父亲哭是什么时候">【午稽之谈】你第一次见父亲哭是什么时候</a></li><li id="-"><a href="http://news.zhibo8.cc/nba/2018-06-17/5b25ff51edd8f.htm" target="_blank" title="NBA人士认为马刺会考虑交易大加">NBA人士认为马刺会考虑交易大加</a></li><li id="-"><a href="http://news.zhibo8.cc/nba/2018-06-17/5b25f51cbe382.htm" target="_blank" title="塞克斯顿试训魔术">塞克斯顿试训魔术</a></li><li id="-"><a href="https://bbs.zhibo8.cc/forum/topic?tid=2362112" target="_blank" title="【论坛】克莱能不能效仿哈登，去其它球队成为第一选择">【论坛】克莱能不能效仿哈登，去其它球队成为第一选择</a></li><li id="-"><a href="http://news.zhibo8.cc/nba/2018-06-17/5b25f0e7b56c0.htm" target="_blank" title="克莱-汤普森祝福父亲节日快乐">克莱-汤普森祝福父亲节日快乐</a></li><li id="-"><a href="http://news.zhibo8.cc/nba/2018-06-17/5b25ebea1474f.htm" target="_blank" title="爵士今日试训名单">爵士今日试训名单</a></li><li id="-"><a href="http://news.zhibo8.cc/nba/2018-06-17/5b25ea4fb8199.htm" target="_blank" title="助教：数据无法体现鲍尔的能力">助教：数据无法体现鲍尔的能力</a></li><li id="-"><a href="http://news.zhibo8.cc/nba/2018-06-17/5b25e7723be70.htm" target="_blank" title="德雷克背对篮筐扔进中圈投篮">德雷克背对篮筐扔进中圈投篮</a></li><li id="-"><a href="https://bbs.zhibo8.cc/forum/topic?tid=2362306" target="_blank" title="【论坛】21世纪以来，哪届FMVP最有含金量">【论坛】21世纪以来，哪届FMVP最有含金量</a></li>                </ul>
+            </div>
+        </div>
+        <div class="advert margin_top_10">
+            
+        </div>
+    </div>
+
+	<script>
+    var screenwidth=screen.availWidth;
+    console.log("screenwidth:"+screenwidth);
+    var minWidth=1279;
+    function ad_left(){
+        if(screenwidth>minWidth) {
+            document.writeln("<iframe id=\'ac_im86_67228385\' name=\'ac_im86_67228385\' src=\'//afpeng.alimama.com/ex?a=mm_119500411_19076741_67228385&sp=0&cb=_acM.r\' width=\'120\' height=\'600\' frameborder=\'0\' marginwidth=\'0\' marginheight=\'0\' scrolling=\'no\' allowtransparency=\'true\' ></iframe>");
+        }
+    }
+    function ad_right(){
+        if(screenwidth>minWidth) {
+            document.writeln("<iframe id=\'ac_im86_67236047\' name=\'ac_im86_67236047\' src=\'//afpeng.alimama.com/ex?a=mm_119500411_19076741_67236047&sp=0&cb=_acM.r\' width=\'120\' height=\'600\' frameborder=\'0\' marginwidth=\'0\' marginheight=\'0\' scrolling=\'no\' allowtransparency=\'true\' ></iframe>");
+        }
+    }
+</script>
+
+<div class="ad_left advert">
+    <script type="text/javascript">
+        ad_left();
+    </script>
+
+<!--    <div id="ad_left_close" class="ad_close">关闭</div>-->
+</div>
+
+<div class="ad_right advert">
+    <script type="text/javascript">
+        ad_right();
+    </script>
+
+<!--    <div id="ad_right_close" class="ad_close">关闭</div>-->
+</div>
+
+
+
+</div>
+
+<div id="channels" class="container txt_center"> <a href="https://www.zhibo8.cc/index2.htm" target="_blank">点此查看近期更多赛程</a> </div>
+
+<div class="footer container">
+    <div id="links"> 合作网站: <a href="https://m.zhibo8.cc/" title="直播吧手机版" target="_blank">手机直播吧</a>&nbsp;&nbsp; <a href="http://www.188hi.com/" target="_blank">188Hi网址导航</a>&nbsp;&nbsp; <a href="http://www.hao123.com/" target="_blank">Hao123网址导航</a>&nbsp;&nbsp; <a href="https://www.zhibo8.cc/link.htm" target="_blank">进入友情链接</a> <br>
+        <a href="https://www.zhibo8.cc/contact.htm" target="_blank"><font color="red">联系我们</font></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://www.zhibo8.cc/mianze.htm" target="_blank">免责声明</a> <a href="https://pl.zhibo8.cc/usercenter/web/userService.html" target="_blank">用户协议</a> <a href="https://www.zhibo8.cc/web/privacyPolicyPc.html" target="_blank">隐私政策</a> <a href="https://www.zhibo8.cc/baocuo.htm" target="_blank">报错反馈</a> <a href="https://m.zhibo8.cc/feedback/" target="_blank">投诉反馈</a>&nbsp;&nbsp;<a href="http://report.12377.cn:13225/toreportinputNormal_anis.do" target="_blank" rel="external nofollow">网上有害信息举报专区</a>&nbsp;&nbsp;<a href="https://www.zhibo8.cc/web/publicHealth.html" target="_blank" rel="external nofollow">巩固国家卫生城市，建设健康厦门</a></div>
+    <div id="copyright"><a href="https://www.zhibo8.cc/">直播吧</a>所有视频均链接到各大视频网站播放，本站不提供任何视听上传服务，如有异议请与我们取得联系。<br>闽网文（2016）5589-096号  闽B2-20160123  闽ICP备15018471号-2 <br><img src="./zhibob_files/policy_icon.jpg"> 闽公网安备 35020302001925号</div>
+</div>
+<script src="./zhibob_files/jquery.min.js.下载"></script>
+<script src="./zhibob_files/common.js.下载" type="text/javascript"></script>
+<script src="./zhibob_files/index_main.js.下载"></script>
+
+<script src="https://www.zhibo8.cc/js/adv-slide-toggle.js"></script>
+
+<!-- 142348687：首页富媒体 类型：固定 尺寸：300x250-->
+<!--<div id="afp_box_rb" style="width: auto; overflow: hidden; position: fixed; bottom: 0; right: 0; z-index: 999;">-->
+<!--    <div id="cls_afp_box_rb_btn" style="width:100%; margin: 0; text-align: right; font-size: 12px; "><span style=" border: solid 1px #666;cursor: pointer;">关闭</span></div>-->
+<!--    <script type="text/javascript">//<![CDATA[-->
+<!--        $("#cls_afp_box_rb_btn").click(function () {-->
+<!--            $("#afp_box_rb").hide();-->
+<!--        });-->
+<!--        ac_as_id = "mm_119500411_19076741_142348687";-->
+<!--        ac_format = 1;-->
+<!--        ac_mode = 1;-->
+<!--        ac_group_id = 1;-->
+<!--        ac_server_base_url = "afpeng.alimama.com/";-->
+<!--        //]]></script>-->
+<!--    <script type="text/javascript" src="//afpmm.alicdn.com/g/mm/afp-cdn/JS/k.js"></script>-->
+<!--</div>-->
+
+<div class="pop-autoapp" id="popautoapp" style="display: block;">
+    <a href="https://www.zhibo8.cc/shouji.htm" target="_blank">
+        <div class="pop-autoapp-close">
+            <span class="icon16 icon16-close">关闭</span>
+        </div>
+        <div>直播吧手机客户端</div>
+        <div><img src="./zhibob_files/2weima_116.png"></div>
+        <div>点击或扫描下载</div>
+    </a>
+    <div class="cls_ad_btn" style="text-align: center;">关闭广告</div>
+</div>
+<script>
+    $(function(){
+        $(".icon16-close").click(function(){
+            $("#popautoapp").hide();
+            return false;
+        });
+        if(navigator.userAgent.indexOf('Mobile')>-1 || navigator.userAgent.indexOf('mobile')>-1 || navigator.userAgent.indexOf('Android')>-1 || navigator.userAgent.indexOf('iPad')>-1 || navigator.userAgent.indexOf('iPhone')>-1){
+            $("#popautoapp").hide();
+        }
+    });
+</script>
+<style>
+    .pop-autoapp {
+        width: 130px;
+        height: 180px;
+        /*position: fixed;*/
+        left: 50%;
+        margin-left: 510px;
+        top: 90px;
+        /*top:690px;*/
+        position: absolute;
+    }
+    .pop-autoapp a:link, .pop-autoapp a:visited {
+        color: #666666;
+        background-color: #efefef;
+        text-decoration: none;
+    }
+    .pop-autoapp a:hover {
+        color: #666666;
+        background-color: #d0d0d0;
+        text-decoration: none;
+    }
+    .pop-autoapp a {
+        display: block;
+        width: 130px;
+        height: 180px;
+        text-align: center;
+        font-size: 12px;
+    }
+    .pop-autoapp a div {
+        line-height: 24px;
+    }
+
+    .pop-autoapp span.icon16 {
+        width: 30px;
+        height: 15px;
+        display: inline-block;
+        padding: 0;
+        overflow: hidden;
+        cursor: pointer;
+        border: solid 1px #ccc;
+        margin-bottom: 1px;
+        text-align: center;
+    }
+    .pop-autoapp a .pop-autoapp-close {
+        line-height: 15px;
+        height: 18px;
+        margin-bottom: 3px;
+        text-align: right;
+        background-color: #ffffff;
+    }
+    .pop-autoapp a .pop-autoapp-close {
+        text-align: right;
+    }
+</style>
+
+<!--  手机客户端广告  -->
+<div id="m_adv" style="display:none; width: 100%; height:auto; position: fixed; z-index: 9999; top: 0; background: #000; opacity: 0.8; color: #fff; text-align: center; font-family: 黑体;">
+    <img style="width: 30px; height: 30px; margin: 5px 0 5px 10px ; border:solid 1px #555; border-radius: 10px; display: block; float: left; " src="./zhibob_files/icon120@2x.png">
+    <p style="position:relative; margin: 5px 0 0 0; padding:0  15px ; float:left;">
+        <span style=" font-size:16px; line-height: 20px; display: block; text-shadow: 0 1px 1px #fff; ">直播吧APP</span>
+        <span style=" font-size:12px; line-height: 15px;  display: block; text-shadow: 0 1px 1px #fff;"></span>
+    </p>
+    <a style="color: #fff; border: solid 1px #fff;background: #fff;border-radius: 5px; color: #000; float: left; padding: 2px;text-decoration: none;margin: 10px 0 ; font-size: 16px; box-shadow: 0 1px 2px #fff;text-shadow: 0 1px 3px #555;" href="https://m.zhibo8.cc/download/?dev=android">免费下载</a>
+    <span id="m_close" class="ui-icon ui-icon-shadow ui-icon-delete" style="float: right; margin: 10px 20px;">&nbsp;</span>
+</div>
+<style>
+    .ui-icon {
+        width: 18px;
+        height: 18px;
+    }
+    .ui-icon-shadow {
+        -moz-box-shadow: 0 1px 0 rgba(255,255,255,.4);
+        -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.4);
+        box-shadow: 0 1px 0 rgba(255,255,255,.4);
+    }
+    .ui-icon-delete {
+        background-position: -73px -1px;
+    }
+    .ui-icon, .ui-icon-searchfield:after {
+        background-color: #666;
+        background-color: rgba(0,0,0,.4);
+        background-image: url(//code.jquery.com/mobile/1.3.0/images/icons-18-white.png);
+        background-repeat: no-repeat;
+        -webkit-border-radius: 9px;
+        border-radius: 9px;
+    }
+</style>
+<script>
+    function setDomainCookie(name,value,domain)
+    {
+        var Days = 30;
+        var exp = new Date();
+        exp.setTime(exp.getTime() + Days*24*60*60*1000);
+        document.cookie = name + "="+ escape (value) + ";expires=" + exp.toGMTString()+";domain=" + domain + ";path=/";
+    }
+    var browser={
+        versions:function(){
+            var u = navigator.userAgent, app = navigator.appVersion;
+            return {         //移动终端浏览器版本信息
+                trident: u.indexOf('Trident') > -1, //IE内核
+                presto: u.indexOf('Presto') > -1, //opera内核
+                webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+                gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+                mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+                ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+                android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或uc浏览器
+                iPhone: u.indexOf('iPhone') > -1 , //是否为iPhone或者QQHD浏览器
+                iPad: u.indexOf('iPad') > -1, //是否iPad
+                webApp: u.indexOf('Safari') == -1, //是否web应该程序，没有头部与底部
+                JUC: u.indexOf('UCWEB') > -1 ||  u.indexOf('JUC') > -1 || u.indexOf('rv:1.2.3.4') > -1 || u.indexOf('Firefox/1.') > -1
+            };
+        }(),
+        language:(navigator.browserLanguage || navigator.language).toLowerCase()
+    }
+    $(function(){
+        if(browser.versions.android){
+            $("body").css("margin-top",'40px');
+            $("#m_adv").show();
+            $("#m_close").click(function(){
+                $("#m_adv").hide();
+                $("body").css("margin-top",'0');
+            });
+            $("#m_adv").click(function(){
+                window.location = '//m.zhibo8.cc/download/?dev=android';
+            });
+        }
+    })
+
+
+    function IsMobile() {
+        if(screen==undefined||screen.width>1200 || browser.versions.iPad==true){
+            return false;
+        }
+        if (browser.versions.android == true || browser.versions.iPhone == true || browser.versions.JUC == true ) {
+            return true;
+        }
+        return false;
+    }
+
+    if (IsMobile()){
+        $(".headeradvert").html('<span onclick="click_span_m()" style="display:block; width:320px; margin:0 auto; text-align:center; color:#fff; background: #4998e7;font-size:55px; line-height:70px;border-radius: 16px;">触屏版</span>');
+    }
+
+    function click_span_m() {
+        if (IsMobile()){
+            setDomainCookie("defaultJumpDomain", "m",".zhibo8.cc");
+        }
+        window.location.href = "//m.zhibo8.cc";
+    }
+</script>
+
+
+<style>
+    .bf-box {
+        position:fixed;
+        border:2px solid #ccc;
+        background:#fff;
+        font-size:12px;
+        width:auto;
+        z-index:1;
+        display:none;
+    }
+    .bf-triangle {
+        display:block;
+        position:relative;
+        left:60px;
+        top:-16px;
+        z-index:20;
+    }
+    .bf-triangle .t-border,
+    .bf-triangle .t-inset {
+        left:0px;
+        top:0px;
+        width:0;
+        height:0;
+        font-size:0;
+        overflow:hidden;
+        position:absolute;
+        border-width:8px;
+        border-style:dashed dashed solid dashed ;
+    }
+    .bf-triangle .t-border {
+        border-color:transparent transparent #ccc transparent;
+        top:-2px;
+    }
+    .bf-triangle .t-inset {
+        border-color: transparent transparent #fff transparent ;
+    }
+    .bf-content {
+        padding:3px;
+        margin:3px;
+        text-align:center;
+        line-height:18px;
+    }
+    .bf-content p {
+        margin:0;
+        padding:0;
+        height: 20px;
+    }
+    .bf-content .bf-period {
+        width:60px;
+        float:left;
+    }
+    .bf-content .bf-nba {
+        float:left;
+        padding-left:10px;
+        border-left:2px #ccc solid;
+        min-width: 150px;
+    }
+    .bf-content .bf-nba span {
+        display:inline-block;
+        width:30px;
+    }
+    .bf-content .bf-zuqiu1 {
+        text-align:left;
+        float:left;
+        border-right:2px #ccc solid;
+        min-width:150px;
+        min-height:50px;
+    }
+    .bf-content .bf-zuqiu2 {
+        text-align:right;
+        float:left;
+        border-left:2px #ccc solid;
+        min-width:150px;
+        min-height:50px;
+    }
+    .bf-content span {
+        display: inline-block;
+        vertical-align: middle;
+        width: 15px;
+        height: 20px;
+        background: transparent url("//static4style.oss-cn-hangzhou.aliyuncs.com/txt_pc_img/event_bg2.png") no-repeat 1px 3px;
+        margin:0 3px;
+    }
+
+    .bf-content span.red {
+        background: transparent url("//static4style.oss-cn-hangzhou.aliyuncs.com/txt_pc_img/event_bg2.png") no-repeat 1px -93px;
+    }
+    .bf-content span.wulong {
+        background: transparent url("//static4style.oss-cn-hangzhou.aliyuncs.com/txt_pc_img/event_bg2.png") no-repeat 1px -240px;
+    }
+    .bf-content span.huang2 {
+        background: transparent url("//static4style.oss-cn-hangzhou.aliyuncs.com/txt_pc_img/event_bg2.png") no-repeat 1px -210px;
+    }
+    .bf-content .bf-clear {
+        clear:both;
+    }
+
+</style>
+
+<div class="bf-box" style="display: none;">
+    <div class="bf-triangle">
+        <div class="t-border"></div>
+        <div class="t-inset"></div>
+    </div>
+
+    <div class="bf-content">
+        <div class="bf-zuqiu1"></div>
+        <div class="bf-period"></div>
+        <div class="bf-zuqiu2"></div>
+        <div class="bf-clear"></div>
+    </div>
+</div>
+
+
+<script src="./zhibob_files/bf4.js.下载"></script>
+
+
+<div style="display: none">
+    <script src="./zhibob_files/stat.php" language="JavaScript" charset="gb2312"></script><script src="./zhibob_files/core.php" charset="utf-8" type="text/javascript"></script><a href="http://www.cnzz.com/stat/website.php?web_id=709406" target="_blank" title="站长统计"><img border="0" hspace="0" vspace="0" src="./zhibob_files/pic1.gif"></a>
+</div>
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?3212511d67978fc36e99a8ba103a1cc8";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+<div class="backToTop" title="返回顶部" style="display: none;">返回顶部</div></body></html>
