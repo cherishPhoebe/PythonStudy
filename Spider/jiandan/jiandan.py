@@ -23,7 +23,7 @@ def pares_one(html):
     soup = BeautifulSoup(html, 'lxml')
     imgs = soup.select('img')
     num = soup.select('#body #comments .comments .current-comment-page')[0].getText()[1:-1]
-    print('num'+ num)
+    print('num' + num)
     next_url = 'http://jandan.net/ooxx/page-{}#comments'.format(int(num)-1)
     print("next_url" + next_url)
  
